@@ -1,0 +1,28 @@
+<div class="jumbotron">
+  <div class="container welcome-banner">
+    <h1>Welcome to familyShare!</h1>
+    <p>A private family photo sharing and social media website.</p>
+    <p>
+      <%= link_to "Sign up", new_user_path, class: "btn btn-primary btn-lg" %> 
+      or if you have an account:
+    </p>
+  </div>
+  <div class="container">
+    <%= form_for :sessions, url: sessions_path, html: { class: "form-signin" } do |f| %>
+      <h2 class="form-signin-heading">Please sign in</h2>
+      <%= f.text_field :credential_name, class: "form-control", 
+        placeholder: "Email or Username" %>
+      <%= f.password_field :password, class: "form-control", 
+        placeholder: "Password" %>
+      <label class="checkbox">
+        <input type="checkbox" value="remember-me"> Remember me
+      </label>
+      <button class="btn btn-lg btn-primary btn-block" type="submit">
+        Sign In
+      </button>
+    <% end %>
+  </div>
+</div>
+
+
+
