@@ -1,3 +1,53 @@
 // Place all the styles related to the groups controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.group-margin {
+  margin-top: 40px;
+}
+
+.new-group-form {
+  max-width: 330px;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+.fancy-header {
+  font-family: "Trebuchet MS";
+  font-size: 60px;
+  text-align: center;
+}
+
+.fancy-sub-header {
+  font-family: "Trebuchet MS";
+  font-size: 30px;
+  text-align: center;
+}
+
+.pic-back-friends {
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-image: url('images/friends.jpg');
+  background-size: cover;
+  position:absolute;
+  top:0;
+  bottom:0;
+  left:0;
+  right:0;
+  overflow:hidden;
+  z-index:-1;
+}
+
+.group-btns {
+  display: inline-block;
+  margin-left: 43%;
+   background: -moz-linear-gradient(top, rgba(122,122,122,0.65) 0%, rgba(122,122,122,0.65) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(122,122,122,0.65)), color-stop(100%,rgba(122,122,122,0.65))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(122,122,122,0.65) 0%,rgba(122,122,122,0.65) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(122,122,122,0.65) 0%,rgba(122,122,122,0.65) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(122,122,122,0.65) 0%,rgba(122,122,122,0.65) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(122,122,122,0.65) 0%,rgba(122,122,122,0.65) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a67a7a7a', endColorstr='#a67a7a7a',GradientType=0 ); /* IE6-9 */
+  border-radius: 10px;
+  padding: 5px 10px 10px 10px;
+}

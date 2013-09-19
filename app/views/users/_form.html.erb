@@ -20,26 +20,20 @@
     <%= f.text_field :username %>
   </div>
   <div class="field">
-    <%= f.label :password_hash %><br>
-    <%= f.text_field :password_hash %>
+    <%= f.label :password %><br>
+    <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_salt %><br>
-    <%= f.text_field :password_salt %>
+    <%= f.label :password_confirmation %><br>
+    <%= f.password_field :password_confirmation %>
   </div>
-  <div class="field">
+  <!-- <div class="field">
     <%= f.label :avatar %><br>
     <%= f.text_field :avatar %>
   </div>
-  <div class="field">
-    <%= f.label :userlevel %><br>
-    <%= f.number_field :userlevel %>
-  </div>
-  <div class="field">
-    <%= f.label :group %><br>
-    <%= f.text_field :group %>
-  </div>
+  -->
   <div class="actions">
     <%= f.submit %>
   </div>
 <% end %>
+

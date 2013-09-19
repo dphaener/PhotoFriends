@@ -1,4 +1,6 @@
 PhotoFriends::Application.routes.draw do
+  get "log_out" => "sessions#destroy", :as => "log_out"
+  
   resources :events
 
   resources :comments
@@ -7,9 +9,9 @@ PhotoFriends::Application.routes.draw do
 
   resources :galleries
 
-  resources :users
-
-  resources :groups
+  resources :users do
+    resources:groups
+  end
   
   resources :sessions
 

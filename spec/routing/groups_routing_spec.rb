@@ -4,31 +4,31 @@ describe GroupsController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/groups").should route_to("groups#index")
+      get("/users/1/groups").should route_to("groups#index", :user_id => "1")
     end
 
     it "routes to #new" do
-      get("/groups/new").should route_to("groups#new")
+      get("/users/1/groups/new").should route_to("groups#new", :user_id => "1")
     end
 
     it "routes to #show" do
-      get("/groups/1").should route_to("groups#show", :id => "1")
+      get("/users/1/groups/1").should route_to("groups#show", :id => "1", :user_id => "1")
     end
 
     it "routes to #edit" do
-      get("/groups/1/edit").should route_to("groups#edit", :id => "1")
+      get("/users/1/groups/1/edit").should route_to("groups#edit", :id => "1", :user_id => "1")
     end
 
     it "routes to #create" do
-      post("/groups").should route_to("groups#create")
+      post("/users/1/groups").should route_to("groups#create", :user_id => "1")
     end
 
     it "routes to #update" do
-      put("/groups/1").should route_to("groups#update", :id => "1")
+      put("/users/1/groups/1").should route_to("groups#update", :id => "1", :user_id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/groups/1").should route_to("groups#destroy", :id => "1")
+      delete("/users/1/groups/1").should route_to("groups#destroy", :id => "1", :user_id => "1")
     end
 
   end
