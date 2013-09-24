@@ -9,50 +9,14 @@
 <body>
   
 <% if session[:user_id] %>
-  <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="container">
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#">Photo Friends</a>
-        </div>
-        <div class="navbar-collapse collapse">
-          <ul class="nav navbar-nav">
-            <li><%= link_to "Home", user_groups_path(session[:user_id]) %></li>
-            <!-- <li class="dropdown">
-              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Projects <b class="caret"></b></a>
-              <ul class="dropdown-menu">
-                <li><a href="http://blog.dphaener.com">dphBlog</a></li>
-                <li><a href="http://thrive.dphaener.com">Thrive Nutrition and Fitness</a></li>
-                <li><a href="brewingtools.html">Brewing Tools</a></li>
-                <li class="divider"></li>
-                <li class="dropdown-header">Nav header</li>
-                <li><a href="#">Separated link</a></li>
-                <li><a href="#">One more separated link</a></li>
-                
-              </ul>
-            </li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="contact.html">Contact</a></li>
-            -->
-          </ul>
-          <div class="navbar-right">
-            <% if current_user %>
-              <%= link_to "Log Out", log_out_path, class: "btn btn-success btn-over btn-mrg" %>
-            <% end %>
-          </div>
-      </div><!--/.navbar-collapse -->
-    </div>
-  </div>
+  <%= render 'layouts/navbar' %>
 <% end %>
-<% flash.each do |name, msg| %>
-  <%= content_tag :div, msg, :id => "flash_#{name}" %>
-<% end %>
-
+  
 <%= yield %>
+<br />
+<div class="debug-div">
+  <%= debug(params) if Rails.env.development? %>
+</div>
 
 </body>
 </html>

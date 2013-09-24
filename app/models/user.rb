@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
-  has_and_belongs_to_many :groups
+  has_many :groups_and_users
+  has_many :groups, through: :groups_and_users
   
   attr_accessor :password
   

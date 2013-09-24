@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130918193501) do
+ActiveRecord::Schema.define(version: 20130922212728) do
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
@@ -55,10 +55,11 @@ ActiveRecord::Schema.define(version: 20130918193501) do
     t.string   "name"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "group_id"
     t.string   "password_hash"
     t.string   "password_salt"
   end
+
+  add_index "groups", ["name"], name: "index_groups_on_name", unique: true, using: :btree
 
   create_table "groups_and_users", force: true do |t|
     t.integer  "group_id"
@@ -85,12 +86,11 @@ ActiveRecord::Schema.define(version: 20130918193501) do
     t.string   "password_salt"
     t.string   "avatar"
     t.integer  "userlevel"
-    t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "user_id"
+    t.integer  "defaultgroup"
   end
 
-  add_index "users", ["group_id"], name: "index_users_on_group_id", using: :btree
+  add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree
 
 end

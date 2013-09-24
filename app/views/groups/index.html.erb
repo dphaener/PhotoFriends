@@ -1,42 +1,11 @@
-<div class = "pic-back-friends">
-  <div class = "jumbotron group-margin">
-    <h1 class="fancy-header">Your groups</h1>
-    
-    <% if @groups.empty? %>
-      <h2 class="fancy-sub-header">You do not belong to any groups!</h2>
-      <div class = "group-btns">
-        <%= link_to '<button class = "btn btn-primary">Create</button>'.html_safe, new_user_group_path %>
-        <%= link_to '<button class = "btn btn-primary">Join</button>'.html_safe, user_groups_path(session[:user_id]) %>
-      </div>
-    <% else %>
-      <table>
-        <thead>
-          <tr>
-            <th>Owner</th>
-            <th>Name</th>
-            <th></th>
-            <th></th>
-            <th></th>
-          </tr>
-        </thead>
-      
-        <tbody>
-          <% @groups.each do |group| %>
-            <tr>
-              <td><%= group.owner %></td>
-              <td><%= group.name %></td>
-              <td><%= link_to 'Show', group %></td>
-              <td><%= link_to 'Edit', edit_group_path(group) %></td>
-              <td><%= link_to 'Destroy', group, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-            </tr>
-          <% end %>
-        </tbody>
-      </table>
-      
-      <br>
-      
-      <%= link_to 'New Group', new_user_group_path %>
-    <% end %>
+<script>changetofriends()</script>
+<div class = "jumbotron" style="overflow:hidden;">
+  <h1>You do not belong to any groups!</h1><br />
+  <div class="col-md-offset-5 col-md-2 gray-box">
+    <%= link_to '<button class = "btn btn-primary pull-left">Create</button>'.html_safe, new_user_group_path %>
+    <span style="margin-left: 20px; color: white;">or</span>
+    <%= link_to '<button class = "btn btn-primary pull-right">Join</button>'.html_safe, user_groups_path(session[:user_id]) %><br />
   </div>
 </div>
+
   

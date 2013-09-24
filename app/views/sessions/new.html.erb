@@ -1,21 +1,23 @@
-<div class = "pic-back">
-  <div class="jumbotron">
-    <div class="welcome-banner">
-      <h1>Welcome to Photo Friends!</h1>
-      <p>A private family photo sharing and social media website.</p>
-      <p>
-        <%= link_to "Sign up", new_user_path, class: "btn btn-primary btn btn-ovr" %> 
-        or if you have an account:
-      </p>
-      <div class="sign-in">
-        <%= form_tag sessions_path, html: { class: "form-signin" } do %>
-          <h2 class="form-signin-heading">Sign in:</h2>
-          <%= text_field_tag :credential_name, params[:credential_name], class: "form-control text-field", 
-            placeholder: "Email or Username" %>
-          <%= password_field_tag :password, nil, class: "form-control pass-field", placeholder: "Password" %>
-          <%= submit_tag 'Submit', :class => "btn btn-lg btn-primary btn-block", method: :post %>
-        <% end %>
-      </div>
-    </div>
-  </div>
+<script>changetofamily()</script>
+<div class="jumbotron">
+  <h1>Welcome to Photo Friends!</h1>
+  <h3>A private family photo sharing and social media website.</h3>
+  <h3>
+    <%= link_to "<button class='btn btn-primary'>Sign up</button>".html_safe, sign_up_path %> 
+    or if you have an account:
+  </h3>
 </div>
+
+<div class="container">
+  <div class="gray-box col-md-4">
+    <% flash.each do |key, value| %>
+      <div class="alert alert-danger"><%= value %></div>
+    <% end %>
+    <%= form_for(:session, url: sessions_path, :html => { class: "form-signin" }) do |f| %>
+        <%= f.text_field :credential_name, class: "form-control", placeholder: "Email or Username", class: "form-control" %>
+        <%= f.password_field :password, class: "form-control", placeholder: "Password", class: "form-control" %>
+      <%= f.submit 'Submit', :class => "btn btn-lg btn-primary" %>
+    <% end %>
+  </div>
+</div>  
+

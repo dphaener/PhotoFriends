@@ -3,10 +3,6 @@ require "spec_helper"
 describe GroupsController do
   describe "routing" do
 
-    it "routes to #index" do
-      get("/users/1/groups").should route_to("groups#index", :user_id => "1")
-    end
-
     it "routes to #new" do
       get("/users/1/groups/new").should route_to("groups#new", :user_id => "1")
     end

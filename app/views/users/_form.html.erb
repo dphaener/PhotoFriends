@@ -1,3 +1,4 @@
+<script>changetofriends()</script>
 <%= form_for(@user) do |f| %>
   <% if @user.errors.any? %>
     <div id="error_explanation">
@@ -10,30 +11,36 @@
       </ul>
     </div>
   <% end %>
-
-  <div class="field">
-    <%= f.label :email %><br>
-    <%= f.text_field :email %>
-  </div>
-  <div class="field">
-    <%= f.label :username %><br>
-    <%= f.text_field :username %>
-  </div>
-  <div class="field">
-    <%= f.label :password %><br>
-    <%= f.password_field :password %>
-  </div>
-  <div class="field">
-    <%= f.label :password_confirmation %><br>
-    <%= f.password_field :password_confirmation %>
-  </div>
-  <!-- <div class="field">
-    <%= f.label :avatar %><br>
-    <%= f.text_field :avatar %>
-  </div>
-  -->
-  <div class="actions">
-    <%= f.submit %>
+  <div class="jumbotron">
+    <% if request.path == edit_user_path(current_user) %>
+      <h1>Edit your profile</h1>
+    <% else %>
+      <h1>Create an account</h1>
+    <% end %>
+    <div class="field">
+      <%= f.label :email %><br>
+      <%= f.text_field :email, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :username %><br>
+      <%= f.text_field :username, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :password %><br>
+      <%= f.password_field :password, class: "form-control"%>
+    </div>
+    <div class="field">
+      <%= f.label :password_confirmation %><br>
+      <%= f.password_field :password_confirmation, class: "form-control" %>
+    </div>
+    <div class="field">
+      <%= f.label :avatar %><br>
+      <%= f.text_field :avatar, class: "form-control" %>
+    </div>
+    <br />
+    <div class="actions">
+      <%= f.submit "Submit", class: "btn btn-lg btn-primary" %>
+    </div>
   </div>
 <% end %>
 

@@ -5,8 +5,8 @@ describe "users/edit" do
     @user = assign(:user, stub_model(User,
       :email => "MyString",
       :username => "MyString",
-      :password_hash => "MyString",
-      :password_salt => "MyString",
+      :password => "MyString",
+      :password_confirmation => "MyString",
       :avatar => "MyString",
       :userlevel => 1,
       :group => nil
@@ -20,11 +20,9 @@ describe "users/edit" do
     assert_select "form[action=?][method=?]", user_path(@user), "post" do
       assert_select "input#user_email[name=?]", "user[email]"
       assert_select "input#user_username[name=?]", "user[username]"
-      assert_select "input#user_password_hash[name=?]", "user[password_hash]"
-      assert_select "input#user_password_salt[name=?]", "user[password_salt]"
+      assert_select "input#user_password[name=?]", "user[password]"
+      assert_select "input#user_password_confirmation[name=?]", "user[password_confirmation]"
       assert_select "input#user_avatar[name=?]", "user[avatar]"
-      assert_select "input#user_userlevel[name=?]", "user[userlevel]"
-      assert_select "input#user_group[name=?]", "user[group]"
     end
   end
 end
