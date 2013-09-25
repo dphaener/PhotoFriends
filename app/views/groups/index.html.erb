@@ -4,7 +4,7 @@
   <div class="col-md-offset-5 col-md-2 gray-box">
     <%= link_to '<button class = "btn btn-primary pull-left">Create</button>'.html_safe, new_user_group_path %>
     <span style="margin-left: 20px; color: white;">or</span>
-    <%= link_to '<button class = "btn btn-primary pull-right">Join</button>'.html_safe, user_groups_path(session[:user_id]) %><br />
+    <%= link_to '<button class = "btn btn-primary pull-right">Join</button>'.html_safe, new_user_groupsandusers_path(session[:user_id]) %><br />
   </div>
 </div>
 

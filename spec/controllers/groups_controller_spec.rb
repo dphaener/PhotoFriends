@@ -141,5 +141,4 @@ describe GroupsController do
       response.should redirect_to user_groups_url
     end
   end
-
 end
