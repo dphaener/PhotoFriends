@@ -38,6 +38,13 @@ describe GroupsController do
       get :show, {:id => group.to_param, user_id: user.to_param }, valid_session
       assigns(:group).should eq(group)
     end
+    
+    it 'gets all the galleries associated with the group' do
+      group = Group.create! valid_attributes
+      gallery = Gallery.create!(name: "MyGroup", archive: "1", group_id: group.id)
+      get :show, {id: group.to_param, user_id: user.to_param }
+      assigns(:gallery).should be_a_new(Array)
+    end
   end
 
   describe "GET new" do

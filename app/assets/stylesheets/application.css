@@ -11,7 +11,9 @@
  *= require_self
  *= require bootstrap
  *= require custom_bootstrap/custom_bootstrap
- *= require custom
+ *= require custom.css.scss
+ *= require bootstrap-fileupload.css
+ *= require elastislide
  *= require_tree .
  */
 

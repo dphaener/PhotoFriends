@@ -4,31 +4,31 @@ describe PhotosController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/photos").should route_to("photos#index")
+      get("/users/1/groups/1/galleries/1/photos").should route_to("photos#index", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
     it "routes to #new" do
-      get("/photos/new").should route_to("photos#new")
+      get("/users/1/groups/1/galleries/1/photos/new").should route_to("photos#new", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
     it "routes to #show" do
-      get("/photos/1").should route_to("photos#show", :id => "1")
+      get("/users/1/groups/1/galleries/1/photos/1").should route_to("photos#show", :id => "1", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
     it "routes to #edit" do
-      get("/photos/1/edit").should route_to("photos#edit", :id => "1")
+      get("/users/1/groups/1/galleries/1/photos/1/edit").should route_to("photos#edit", :id => "1", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
     it "routes to #create" do
-      post("/photos").should route_to("photos#create")
+      post("/users/1/groups/1/galleries/1/photos").should route_to("photos#create", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
     it "routes to #update" do
-      put("/photos/1").should route_to("photos#update", :id => "1")
+      put("/users/1/groups/1/galleries/1/photos/1").should route_to("photos#update", :id => "1", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
     it "routes to #destroy" do
-      delete("/photos/1").should route_to("photos#destroy", :id => "1")
+      delete("/users/1/groups/1/galleries/1/photos/1").should route_to("photos#destroy", :id => "1", user_id: "1", group_id: "1", gallery_id: "1")
     end
 
   end

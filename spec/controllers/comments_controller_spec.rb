@@ -29,11 +29,17 @@ describe CommentsController do
   # in order to pass any filters (e.g. authentication) defined in
   # CommentsController. Be sure to keep this updated too.
   let(:valid_session) { {} }
-
+  
+  let(:user) { User.create!( email: 'test@test.com', username: 'test', password: 'abc123', password_confirmation: 'abc123') }
+  
+  let(:group) { Group.create!( owner: "1", name: "MyGroup", password: "abc123", password_confirmation: "abc123") }
+  
+  let(:galleries) {Gallery.create!( name: "MyGallery", archive: "1", group_id: "1" )}
+  
   describe "GET index" do
     it "assigns all comments as @comments" do
       comment = Comment.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, { user: user.to_param, group: group.to_param, gallery: galleries.to_param }, valid_session
       assigns(:comments).should eq([comment])
     end
   end
@@ -41,14 +47,14 @@ describe CommentsController do
   describe "GET show" do
     it "assigns the requested comment as @comment" do
       comment = Comment.create! valid_attributes
-      get :show, {:id => comment.to_param}, valid_session
+      get :show, {:id => comment.to_param, user: user.to_param, group: group.to_param, gallery: galleries.to_param }, valid_session
       assigns(:comment).should eq(comment)
     end
   end
 
   describe "GET new" do
     it "assigns a new comment as @comment" do
-      get :new, {}, valid_session
+      get :new, { user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
       assigns(:comment).should be_a_new(Comment)
     end
   end
@@ -56,7 +62,7 @@ describe CommentsController do
   describe "GET edit" do
     it "assigns the requested comment as @comment" do
       comment = Comment.create! valid_attributes
-      get :edit, {:id => comment.to_param}, valid_session
+      get :edit, {:id => comment.to_param,  user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
       assigns(:comment).should eq(comment)
     end
   end
@@ -65,18 +71,18 @@ describe CommentsController do
     describe "with valid params" do
       it "creates a new Comment" do
         expect {
-          post :create, {:comment => valid_attributes}, valid_session
+          post :create, {:comment => valid_attributes,  user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         }.to change(Comment, :count).by(1)
       end
 
       it "assigns a newly created comment as @comment" do
-        post :create, {:comment => valid_attributes}, valid_session
+        post :create, {:comment => valid_attributes,  user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         assigns(:comment).should be_a(Comment)
         assigns(:comment).should be_persisted
       end
 
       it "redirects to the created comment" do
-        post :create, {:comment => valid_attributes}, valid_session
+        post :create, {:comment => valid_attributes,  user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         response.should redirect_to(Comment.last)
       end
     end
@@ -85,14 +91,14 @@ describe CommentsController do
       it "assigns a newly created but unsaved comment as @comment" do
         # Trigger the behavior that occurs when invalid params are submitted
         Comment.any_instance.stub(:save).and_return(false)
-        post :create, {:comment => { "user" => "invalid value" }}, valid_session
+        post :create, {:comment => { "user" => "invalid value" }, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         assigns(:comment).should be_a_new(Comment)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Comment.any_instance.stub(:save).and_return(false)
-        post :create, {:comment => { "user" => "invalid value" }}, valid_session
+        post :create, {:comment => { "user" => "invalid value" }, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         response.should render_template("new")
       end
     end
@@ -107,18 +113,18 @@ describe CommentsController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Comment.any_instance.should_receive(:update).with({ :user_id => "1" })
-        put :update, {:id => comment.to_param, :comment => { :user_id => "1" }}, valid_session
+        put :update, {:id => comment.to_param, :comment => { :user_id => "1" }, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
       end
 
       it "assigns the requested comment as @comment" do
         comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => valid_attributes}, valid_session
+        put :update, {:id => comment.to_param, :comment => valid_attributes, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         assigns(:comment).should eq(comment)
       end
 
       it "redirects to the comment" do
         comment = Comment.create! valid_attributes
-        put :update, {:id => comment.to_param, :comment => valid_attributes}, valid_session
+        put :update, {:id => comment.to_param, :comment => valid_attributes, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         response.should redirect_to(comment)
       end
     end
@@ -128,7 +134,7 @@ describe CommentsController do
         comment = Comment.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Comment.any_instance.stub(:save).and_return(false)
-        put :update, {:id => comment.to_param, :comment => { "user" => "invalid value" }}, valid_session
+        put :update, {:id => comment.to_param, :comment => { "user" => "invalid value" }, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         assigns(:comment).should eq(comment)
       end
 
@@ -136,7 +142,7 @@ describe CommentsController do
         comment = Comment.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Comment.any_instance.stub(:save).and_return(false)
-        put :update, {:id => comment.to_param, :comment => { "user" => "invalid value" }}, valid_session
+        put :update, {:id => comment.to_param, :comment => { "user" => "invalid value" }, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
         response.should render_template("edit")
       end
     end
@@ -146,13 +152,13 @@ describe CommentsController do
     it "destroys the requested comment" do
       comment = Comment.create! valid_attributes
       expect {
-        delete :destroy, {:id => comment.to_param}, valid_session
+        delete :destroy, {:id => comment.to_param, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
       }.to change(Comment, :count).by(-1)
     end
 
     it "redirects to the comments list" do
       comment = Comment.create! valid_attributes
-      delete :destroy, {:id => comment.to_param}, valid_session
+      delete :destroy, {:id => comment.to_param, user: user.to_param, group: group.to_param, gallery: galleries.to_param}, valid_session
       response.should redirect_to(comments_url)
     end
   end

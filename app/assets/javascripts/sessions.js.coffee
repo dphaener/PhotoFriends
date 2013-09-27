@@ -2,4 +2,4 @@
 # All this logic will automatically be available in application.js.
 # You can use CoffeeScript in this file: http://coffeescript.org/
 
-@changetofamily = () -> jQuery -> $(document.body).css('background-image', 'url(/assets/family_collage.jpg)')
+@changetofamily = () -> $(document.body).css('background-image', 'url(/assets/family_collage.jpg)')

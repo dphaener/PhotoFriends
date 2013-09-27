@@ -1,6 +1,9 @@
 class User < ActiveRecord::Base
   has_many :groups_and_users
   has_many :groups, through: :groups_and_users
+  has_many :photos
+  
+  mount_uploader :avatar, AvatarUploader
   
   attr_accessor :password
   

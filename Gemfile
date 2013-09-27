@@ -56,3 +56,5 @@ gem "bootstrap-sass", github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 gem 'less-rails-bootstrap'
 
 gem 'carrierwave'
+
+gem 'gon'

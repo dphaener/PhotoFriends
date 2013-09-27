@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130922212728) do
+ActiveRecord::Schema.define(version: 20130927082356) do
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
@@ -33,7 +33,6 @@ ActiveRecord::Schema.define(version: 20130922212728) do
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "event_id"
   end
 
   add_index "events", ["group_id"], name: "index_events_on_group_id", using: :btree
@@ -45,7 +44,6 @@ ActiveRecord::Schema.define(version: 20130922212728) do
     t.integer  "group_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "gallery_id"
   end
 
   add_index "galleries", ["group_id"], name: "index_galleries_on_group_id", using: :btree
@@ -70,25 +68,27 @@ ActiveRecord::Schema.define(version: 20130922212728) do
 
   create_table "photos", force: true do |t|
     t.string   "caption"
-    t.string   "name"
-    t.string   "path"
     t.integer  "gallery_id"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.integer  "user_id"
+    t.string   "image"
   end
 
   add_index "photos", ["gallery_id"], name: "index_photos_on_gallery_id", using: :btree
+  add_index "photos", ["user_id"], name: "index_photos_on_user_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email"
     t.string   "username"
     t.string   "password_hash"
     t.string   "password_salt"
-    t.string   "avatar"
+    t.string   "avatar",        default: "default_avatar.jpg"
     t.integer  "userlevel"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "defaultgroup"
+    t.string   "name"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true, using: :btree

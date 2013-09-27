@@ -87,7 +87,10 @@
 }
 
 .jumbotron {
-  margin-top: 50px;
+  margin-top: 100px;
+  padding-top: 10px;
+  overflow: hidden;
+  /* CSS for translucent white background */
   background: -moz-linear-gradient(top, rgba(255,255,255,0.7) 0%, rgba(255,255,255,0.7) 100%); /* FF3.6+ */
   background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(255,255,255,0.7)), color-stop(100%,rgba(255,255,255,0.7))); /* Chrome,Safari4+ */
   background: -webkit-linear-gradient(top, rgba(255,255,255,0.7) 0%,rgba(255,255,255,0.7) 100%); /* Chrome10+,Safari5.1+ */
@@ -97,7 +100,7 @@
   filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#b3ffffff', endColorstr='#b3ffffff',GradientType=0 ); /* IE6-9 */
 }
 
-.jumbotron h1, .jumbotron h3 {
+.jumbotron h1, .jumbotron h4, .jumbotron h2 {
   text-align: center;
 }
 
@@ -109,4 +112,52 @@ html, body {
   min-height: 100%
 }
 
+.fileupload .thumbnail .avtr {
+  display: inline-block;
+  vertical-align: top !important;
+  max-height: 120% !important;
+  max-width: 120% !important;
+  border-radius: 50%;
+  margin-top: -10%;
+  margin-bottom: -10%;
+  margin-left: -10%;
+}
 
+.fileupload .thumbnail {
+  margin: 0 !important;
+}
+
+.gallery {
+  border-radius: 20px;
+  background: #000 url(/assets/black_denim.png);
+  padding-top: 5px;
+  overflow: hidden;
+}
+
+.gallery-cont {
+  padding: 5px;
+}
+
+
+.gallery > img {
+  max-width: 100%;
+  display: block;
+}
+
+.btn-spc {
+    margin-right: 10px;
+}
+
+.btns {
+    margin-top: 30px;
+}
+
+.fileupload .thumbnail .image {
+  display: block;
+  vertical-align: top !important;
+  max-height: 120% !important;
+  max-width: 120% !important;
+  margin-top: -10%;
+  margin-bottom: -10%;
+  margin-left: -10%;
+}

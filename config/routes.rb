@@ -4,16 +4,14 @@ PhotoFriends::Application.routes.draw do
   get "sign_up" => "users#new", :as => "sign_up"
   get "sign_in" => "sessions#new", :as => "sign_in"
   
-  resources :events
-
-  resources :comments
-
-  resources :photos
-
-  resources :galleries
-  
   resources :users do
-    resources :groups 
+    resources :groups do
+      resources :events
+      resources :galleries do
+        resources :photos 
+        resources :comments
+      end
+    end
     resources :groupsandusers
   end
   

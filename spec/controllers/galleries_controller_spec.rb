@@ -23,17 +23,21 @@ describe GalleriesController do
   # This should return the minimal set of attributes required to create a valid
   # Gallery. As you add validations to Gallery, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "name" => "MyString" } }
+  let(:valid_attributes) { { "name" => "MyString", archive: "1", group_id: "1" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
   # GalleriesController. Be sure to keep this updated too.
   let(:valid_session) { {} }
+  
+  let(:user) { User.create!( email: 'test@test.com', username: 'test', password: 'abc123', password_confirmation: 'abc123') }
+  
+  let(:group) { Group.create!( owner: "1", name: "MyGroup", password: "abc123", password_confirmation: "abc123") }
 
   describe "GET index" do
     it "assigns all galleries as @galleries" do
       gallery = Gallery.create! valid_attributes
-      get :index, {}, valid_session
+      get :index, { user_id: user.to_param, group_id: group.to_param }, valid_session
       assigns(:galleries).should eq([gallery])
     end
   end
@@ -41,14 +45,14 @@ describe GalleriesController do
   describe "GET show" do
     it "assigns the requested gallery as @gallery" do
       gallery = Gallery.create! valid_attributes
-      get :show, {:id => gallery.to_param}, valid_session
+      get :show, {:id => gallery.to_param, user_id: user.to_param, group_id: group.to_param }, valid_session
       assigns(:gallery).should eq(gallery)
     end
   end
 
   describe "GET new" do
     it "assigns a new gallery as @gallery" do
-      get :new, {}, valid_session
+      get :new, { user_id: user.to_param, group_id: group.to_param }, valid_session
       assigns(:gallery).should be_a_new(Gallery)
     end
   end
@@ -56,7 +60,7 @@ describe GalleriesController do
   describe "GET edit" do
     it "assigns the requested gallery as @gallery" do
       gallery = Gallery.create! valid_attributes
-      get :edit, {:id => gallery.to_param}, valid_session
+      get :edit, {:id => gallery.to_param, user_id: user.to_param, group_id: group.to_param }, valid_session
       assigns(:gallery).should eq(gallery)
     end
   end
@@ -65,19 +69,19 @@ describe GalleriesController do
     describe "with valid params" do
       it "creates a new Gallery" do
         expect {
-          post :create, {:gallery => valid_attributes}, valid_session
+          post :create, {:gallery => valid_attributes, user_id: user.to_param, group_id: group.to_param }, valid_session
         }.to change(Gallery, :count).by(1)
       end
 
       it "assigns a newly created gallery as @gallery" do
-        post :create, {:gallery => valid_attributes}, valid_session
+        post :create, {:gallery => valid_attributes, user_id: user.to_param, group_id: group.to_param }, valid_session
         assigns(:gallery).should be_a(Gallery)
         assigns(:gallery).should be_persisted
       end
 
-      it "redirects to the created gallery" do
-        post :create, {:gallery => valid_attributes}, valid_session
-        response.should redirect_to(Gallery.last)
+      it "redirects to the groups home page" do
+        post :create, {:gallery => valid_attributes, user_id: user.to_param, group_id: group.to_param }, valid_session
+        response.should redirect_to(user_groups_path(user_id: user.to_param))
       end
     end
 
@@ -85,14 +89,14 @@ describe GalleriesController do
       it "assigns a newly created but unsaved gallery as @gallery" do
         # Trigger the behavior that occurs when invalid params are submitted
         Gallery.any_instance.stub(:save).and_return(false)
-        post :create, {:gallery => { "name" => "invalid value" }}, valid_session
+        post :create, {:gallery => { "name" => "invalid value" }, user_id: user.to_param, group_id: group.to_param }, valid_session
         assigns(:gallery).should be_a_new(Gallery)
       end
 
       it "re-renders the 'new' template" do
         # Trigger the behavior that occurs when invalid params are submitted
         Gallery.any_instance.stub(:save).and_return(false)
-        post :create, {:gallery => { "name" => "invalid value" }}, valid_session
+        post :create, {:gallery => { "name" => "invalid value" }, user_id: user.to_param, group_id: group.to_param }, valid_session
         response.should render_template("new")
       end
     end
@@ -107,19 +111,19 @@ describe GalleriesController do
         # receives the :update_attributes message with whatever params are
         # submitted in the request.
         Gallery.any_instance.should_receive(:update).with({ "name" => "MyString" })
-        put :update, {:id => gallery.to_param, :gallery => { "name" => "MyString" }}, valid_session
+        put :update, {:id => gallery.to_param, :gallery => { "name" => "MyString" }, user_id: user.to_param, group_id: group.to_param }, valid_session
       end
 
       it "assigns the requested gallery as @gallery" do
         gallery = Gallery.create! valid_attributes
-        put :update, {:id => gallery.to_param, :gallery => valid_attributes}, valid_session
+        put :update, {:id => gallery.to_param, :gallery => valid_attributes, user_id: user.to_param, group_id: group.to_param }, valid_session
         assigns(:gallery).should eq(gallery)
       end
 
       it "redirects to the gallery" do
         gallery = Gallery.create! valid_attributes
-        put :update, {:id => gallery.to_param, :gallery => valid_attributes}, valid_session
-        response.should redirect_to(gallery)
+        put :update, {:id => gallery.to_param, :gallery => valid_attributes, user_id: user.to_param, group_id: group.to_param }, valid_session
+        response.should redirect_to(user_group_gallery_path(user.to_param, group.to_param, id: gallery.to_param))
       end
     end
 
@@ -128,7 +132,7 @@ describe GalleriesController do
         gallery = Gallery.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Gallery.any_instance.stub(:save).and_return(false)
-        put :update, {:id => gallery.to_param, :gallery => { "name" => "invalid value" }}, valid_session
+        put :update, {:id => gallery.to_param, :gallery => { "name" => "invalid value" }, user_id: user.to_param, group_id: group.to_param }, valid_session
         assigns(:gallery).should eq(gallery)
       end
 
@@ -136,7 +140,7 @@ describe GalleriesController do
         gallery = Gallery.create! valid_attributes
         # Trigger the behavior that occurs when invalid params are submitted
         Gallery.any_instance.stub(:save).and_return(false)
-        put :update, {:id => gallery.to_param, :gallery => { "name" => "invalid value" }}, valid_session
+        put :update, {:id => gallery.to_param, :gallery => { "name" => "invalid value" }, user_id: user.to_param, group_id: group.to_param }, valid_session
         response.should render_template("edit")
       end
     end
@@ -146,14 +150,14 @@ describe GalleriesController do
     it "destroys the requested gallery" do
       gallery = Gallery.create! valid_attributes
       expect {
-        delete :destroy, {:id => gallery.to_param}, valid_session
+        delete :destroy, {:id => gallery.to_param, user_id: user.to_param, group_id: group.to_param }, valid_session
       }.to change(Gallery, :count).by(-1)
     end
 
     it "redirects to the galleries list" do
       gallery = Gallery.create! valid_attributes
-      delete :destroy, {:id => gallery.to_param}, valid_session
-      response.should redirect_to(galleries_url)
+      delete :destroy, {:id => gallery.to_param, user_id: user.to_param, group_id: group.to_param }, valid_session
+      response.should redirect_to(user_group_galleries_path(user_id: user.to_param, group_id: group.to_param))
     end
   end
 

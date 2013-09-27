@@ -4,31 +4,31 @@ describe GalleriesController do
   describe "routing" do
 
     it "routes to #index" do
-      get("/galleries").should route_to("galleries#index")
+      get("users/1/groups/1/galleries").should route_to("galleries#index", :user_id => "1", :group_id => "1")
     end
 
     it "routes to #new" do
-      get("/galleries/new").should route_to("galleries#new")
+      get("users/1/groups/1/galleries/new").should route_to("galleries#new", :user_id => "1", :group_id => "1")
     end
 
     it "routes to #show" do
-      get("/galleries/1").should route_to("galleries#show", :id => "1")
+      get("users/1/groups/1/galleries/1").should route_to("galleries#show", :id => "1", :user_id => "1", :group_id => "1")
     end
 
     it "routes to #edit" do
-      get("/galleries/1/edit").should route_to("galleries#edit", :id => "1")
+      get("users/1/groups/1/galleries/1/edit").should route_to("galleries#edit", :id => "1", :user_id => "1", :group_id => "1")
     end
 
     it "routes to #create" do
-      post("/galleries").should route_to("galleries#create")
+      post("users/1/groups/1/galleries").should route_to("galleries#create", :user_id => "1", :group_id => "1")
     end
 
     it "routes to #update" do
-      put("/galleries/1").should route_to("galleries#update", :id => "1")
+      put("users/1/groups/1/galleries/1").should route_to("galleries#update", :id => "1", :user_id => "1", :group_id => "1")
     end
 
     it "routes to #destroy" do
-      delete("/galleries/1").should route_to("galleries#destroy", :id => "1")
+      delete("users/1/groups/1/galleries/1").should route_to("galleries#destroy", :id => "1", :user_id => "1", :group_id => "1")
     end
 
   end

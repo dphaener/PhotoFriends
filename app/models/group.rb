@@ -1,6 +1,7 @@
 class Group < ActiveRecord::Base
   has_many :groups_and_users
   has_many :users, through: :groups_and_users
+  has_many :galleries
   
   attr_accessor :password
   

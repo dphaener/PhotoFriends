@@ -16,7 +16,7 @@ describe GroupsandusersController do
   
   describe "GET 'new'" do
     it "returns http success" do
-      get 'new'
+      get 'new', user_id: user.to_param
       response.should be_success
     end
   end
@@ -25,9 +25,8 @@ describe GroupsandusersController do
     context 'user has invalid group credentials' do
       it 'redraws the page with an error message' do
         group = Group.create! valid_attributes
-        expect {
-          get :create, { :id => group.to_param, user_id: user.to_param, password: "abc246", password_confirmation: "abc246", name: "MyGroup" }
-        }.to render_template("new")
+        get :create, { user_id: user.to_param, group: { password: "abc246", password_confirmation: "abc246", name: "MyGroup" } }
+        @group.should eq nil
       end
     end
     
@@ -35,7 +34,7 @@ describe GroupsandusersController do
       it 'creates a new row in the GroupsAndUsers database containing user_id and group_id' do
         group = Group.create! valid_attributes
         expect {
-          get :create, { :group_id => group.to_param, user_id: user.to_param, password: "abc123", password_confirmation: "abc123", name: "MyGroup" }
+          get :create, { user_id: user.to_param, group: valid_attributes }
         }.to change(GroupsAndUsers, :count).by(1)
       end
     end

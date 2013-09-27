@@ -1,5 +1,6 @@
 class PhotosController < ApplicationController
   before_action :set_photo, only: [:show, :edit, :update, :destroy]
+  before_action :set_gallery, :set_group, :set_user
 
   # GET /photos
   # GET /photos.json
@@ -14,7 +15,7 @@ class PhotosController < ApplicationController
 
   # GET /photos/new
   def new
-    @photo = Photo.new
+    @photo = @gallery.photos.new
   end
 
   # GET /photos/1/edit
@@ -24,7 +25,7 @@ class PhotosController < ApplicationController
   # POST /photos
   # POST /photos.json
   def create
-    @photo = Photo.new(photo_params)
+    @photo = @gallery.photos.new(photo_params)
 
     respond_to do |format|
       if @photo.save
@@ -67,8 +68,20 @@ class PhotosController < ApplicationController
       @photo = Photo.find(params[:id])
     end
 
+    def set_gallery
+      @gallery = Gallery.find(params[:gallery_id])
+    end
+
+    def set_group
+      @group = Group.find(params[:group_id])
+    end
+
+    def set_user
+      @user = User.find(params[:user_id])
+    end
+
     # Never trust parameters from the scary internet, only allow the white list through.
     def photo_params
-      params.require(:photo).permit(:caption, :name, :path, :gallery_id)
+      params.require(:photo).permit(:caption, :image, :gallery_id)
     end
 end
