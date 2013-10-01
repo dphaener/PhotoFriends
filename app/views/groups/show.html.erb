@@ -16,10 +16,15 @@
                 <div class="col-md-4 gallery-cont">
                  <div class="gallery">
                     <h2><%= g.name %></h2>
-                    <%= image_tag("/assets/large/4.jpg") %>
-                    <%= link_to "Edit Gallery", edit_user_group_gallery_path(@user.id, @group.id, g.id), class: "btn btn-default pull-left" %>
-                    <%= link_to "Add Photo", new_user_group_gallery_photo_path(@user.id, @group.id, g.id), class: "btn btn-default pull-right" %>
-                 </div>
+                    <% randomphoto = Photo.where(gallery_id: g.id).take %>
+                    <% randomphoto = Photo.new if randomphoto.blank? %>
+                    <%= image_tag(randomphoto.image_url(:preview)) %>
+                    <div class="btn-group gallery-btns">
+                        <%= link_to "Edit Gallery", edit_user_group_gallery_path(@user.id, @group.id, g.id), class: "btn btn-default btn-gall-edit col-md-3" %>
+                        <%= link_to "Show Gallery", user_group_gallery_path(@user, @group, g.id), class: "btn btn-default btn-gall-show col-md-6" %>
+                        <%= link_to "Add Photo", new_user_group_gallery_photo_path(@user.id, @group.id, g.id), class: "btn btn-default btn-photo-add col-md-3" %>
+                    </div>
+                  </div>
                 </div>
               <% end %>
           </div>

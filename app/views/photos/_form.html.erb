@@ -15,29 +15,31 @@
       <% if request.path == edit_user_group_gallery_photo_path(@user.id, @group.id, @gallery.id, @photo.id) %>
           <h2>Edit photo information</h2>
       <% else %>
-          <h2>Upload a new photo</h2>
+          <h1>Upload a new photo</h1>
       <% end %>
-      <div class="field form-group">
-          <%= f.label :image, class: "text-primary field-label control-label col-lg-2" %>
-          <div class="fileupload fileupload-new" data-provides="fileupload">
-            <div class="col-lg-10">
-              <div class="fileupload-preview thumbnail" style="width: 400px; height: 400px">
-                <%= image_tag(@photo.image, size: "400x400", class: "image") %>
+      <div class="row">
+          <div class="field form-group col-md-6">
+              <div class="fileupload fileupload-new" data-provides="fileupload">
+                <div class="col-lg-8 col-lg-offset-2">
+                  <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><%= f.file_field :image %></span>
+                  <div class="fileupload-preview thumbnail" style="width: 200px; height: 200px">
+                    <%= image_tag(@photo.image, size: "200x200", class: "image") %>
+                  </div>
+
+                  <a href="#" class="btn fileupload-exists btn-danger" data-dismiss="fileupload">Remove</a>
+                </div>
               </div>
-              <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><%= f.file_field :avatar %></span>
-              <a href="#" class="btn fileupload-exists btn-danger" data-dismiss="fileupload">Remove</a>
-            </div>
           </div>
-        </div>
-        <div class="field">
-        <%= f.label :caption %><br>
-        <%= f.text_field :caption, class: "form-control" %>
+          <div class="field col-md-6">
+            <%= f.label :caption %><br>
+            <%= f.text_field :caption, class: "form-control" %>
+          </div>
         </div>
         <div class="field">
         <%= f.hidden_field :gallery, value: @gallery.id %>
         </div>
         <div class="actions">
-        <%= f.submit "Save Photo", class: "btn btn-primary" %>
+        <%= f.submit "Save Photo", class: "btn btn-primary pull-right" %>
         </div>
     </div>
 <% end %>

@@ -57,4 +57,6 @@ gem 'less-rails-bootstrap'
 
 gem 'carrierwave'
 
-gem 'gon'
+gem 'rmagick'
+
+gem "blueimp-gallery-rails", "~> 2.7.0"

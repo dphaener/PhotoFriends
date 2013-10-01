@@ -29,7 +29,7 @@ class PhotosController < ApplicationController
 
     respond_to do |format|
       if @photo.save
-        format.html { redirect_to @photo, notice: 'Photo was successfully created.' }
+        format.html { redirect_to user_group_gallery_path(@user.id, @group.id, @gallery.id) }
         format.json { render action: 'show', status: :created, location: @photo }
       else
         format.html { render action: 'new' }

@@ -11,6 +11,9 @@ class GalleriesController < ApplicationController
   # GET /galleries/1
   # GET /galleries/1.json
   def show
+    @photos = Photo.where(gallery_id: @gallery.id).to_a
+    @comments = Comment.where(gallery_id: @gallery.id).to_a
+    @comment = Comment.new
   end
 
   # GET /galleries/new

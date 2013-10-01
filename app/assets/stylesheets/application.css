@@ -11,9 +11,9 @@
  *= require_self
  *= require bootstrap
  *= require custom_bootstrap/custom_bootstrap
- *= require custom.css.scss
- *= require bootstrap-fileupload.css
- *= require elastislide
+ *= require custom
+ *= require bootstrap-file-upload/bootstrap-fileupload.min
+ *= require blueimp/blueimp-gallery.min
  *= require_tree .
  */
 

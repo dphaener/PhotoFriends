@@ -1,19 +1,72 @@
-<p id="notice"><%= notice %></p>
+<div class="jumbotron">
+  <h1><%= @gallery.name %></h1>
+  <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls blueimp-gallery-display">
+    <div class="slides"></div>
+    <h3 class="title"></h3>
+    <a class="prev">‹</a>
+    <a class="next">›</a>
+    <a class="play-pause"></a>
+    <ol class="indicator"></ol>
+  </div>
+  <% if @photos.blank? %>
+    <h2>You have no photos!</h2><br />
+    <%= link_to "<button class='btn btn-primary col-md-2 col-md-offset-5'>Add Photo</button>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, @gallery.id) %>
+  <% else %>
+    <div id="links" class="links">
+        <% @photos.each do |photo| %>
+          <a href='<%= photo.image_url(:large) %>' title='<%= photo.caption %>' data-gallery></a>
+        <% end %>
+    </div>
+  <% end %>
+  <%= link_to "<button class='btn btn-primary col-md-2 col-md-offset-5'>Add Photo</button>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, @gallery.id) %>
+  <% if @comments.blank? %>
+    <h4 class="pull-right">No comments yet. Why not make one?</h3>
+    <button id="show-new-comment" class="btn btn-sm btn-primary" onclick="show-new-comment()">New Comment"</button>
+    <div class="new-comment" id="new-comment" style="visibility: hidden;">
+      <%= form_for(@comment, url: user_group_gallery_comments_path(@user, @group, @gallery)) do |f| %>
+          <%= f.hidden_field :group_id, value: @group.id %>
+          <%= f.hidden_field :user_id, value: @user.id %>
+          <%= image_tag(@user.avatar) %>
+          <%= @user.username %>
+          <%= f.text_field :text %>
+          <%= f.submit :submit %>
+      <% end %>
+    </div>
+    <% else %>
+          <%= form_for(@comment, url: user_group_gallery_comments_path(@user, @group, @gallery)) do |f| %>
+          <%= f.hidden_field :group_id, value: @group.id %>
+          <%= f.hidden_field :user_id, value: @user.id %>
+          <%= image_tag(@user.avatar) %>
+          <%= @user.username %>
+          <%= f.text_field :text %>
+          <%= f.submit :submit %>
+    <% end %>
+    <div class="comment-section">
+        <% @comments.each do |comment| %>
+          <% user = User.find_by(id: comment.user_id) %>
+          <%= image_tag(user.avatar) %>
+          <%= user.username %>
+          <%= comment.updated_at %>
+          <%= comment.text %>
+        <% end %>
+    </div>
+  <% end %>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @gallery.name %>
-</p>
-
-<p>
-  <strong>Archive:</strong>
-  <%= @gallery.archive %>
-</p>
-
-<p>
-  <strong>Group:</strong>
-  <%= @gallery.group %>
-</p>
-
-<%= link_to 'Edit', edit_gallery_path(@gallery) %> |
-<%= link_to 'Back', galleries_path %>
+<script src="/assets/blueimp/blueimp-helper.js"></script>
+<script src="/assets/blueimp/blueimp-gallery.js"></script>
+<script src="/assets/blueimp/blueimp-gallery-fullscreen.js"></script>
+<script src="/assets/blueimp/blueimp-gallery-indicator.js"></script>
+<script src="/assets/blueimp/blueimp-gallery-video.js"></script>
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+<script src="/assets/blueimp/jquery.blueimp-gallery.min.js"></script>
+<script>
+    changetofriends()
+    blueimp.Gallery(
+            document.getElementById('links').getElementsByTagName('a'),
+            {
+                container: '#blueimp-gallery-carousel',
+                carousel: true
+            }
+    );
+</script>

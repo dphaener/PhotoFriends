@@ -14,7 +14,11 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap
-//= require bootstrap-fileupload.js
+//= require bootstrap-file-upload/bootstrap-fileupload.min
+//= require blueimp/blueimp-helper
+//= require blueimp/blueimp-gallery
+//= require blueimp/blueimp-gallery-fullscreen
+//= require blueimp/blueimp-gallery-indicator
+//= require blueimp/jquery.blueimp-gallery.min
 //= require custom
-//= require jquery.elastislide
 //= require_tree .

@@ -104,6 +104,10 @@
   text-align: center;
 }
 
+.jumbotron h1 {
+  padding: 20px;
+}
+
 html, body {
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -138,10 +142,18 @@ html, body {
   padding: 5px;
 }
 
+.gallery > h2 {
+  padding-bottom: 15px;
+  padding-left: 10px;
+  padding-right: 10px;
+  color: antiquewhite;
+}
 
 .gallery > img {
   max-width: 100%;
+  width: 100%;
   display: block;
+  max-height: 254px;
 }
 
 .btn-spc {
@@ -160,4 +172,47 @@ html, body {
   margin-top: -10%;
   margin-bottom: -10%;
   margin-left: -10%;
+}
+
+.gallery-btns {
+  width: 101%;
+  max-width: 110%;
+  overflow: hidden;
+  height: 50px;
+}
+
+.btn-gall-edit {
+  height: 100%;
+  padding-top: 4%;
+  border-top-left-radius: 0;
+  padding-left: 2%;
+  background: #000 url(/assets/black_denim.png);
+}
+
+.btn-gall-show {
+  height: 100%;
+  padding-top: 4%;
+  background: #000 url(/assets/black_denim.png);
+}
+
+.btn-photo-add {
+  height: 100%;
+  padding-top: 4%;
+  background: #000 url(/assets/black_denim.png);
+}
+
+.gallery .btn:hover{
+  background: darkslategray;
+}
+
+#blueimp-gallery-carousel h3 {
+  background: black;
+  border-radius: 0 15px 15px 0;
+  padding: 4px 8px 4px 50px;
+  top: 30px;
+  left: 0px;
+}
+
+.blueimp-gallery>.slides>.slide {
+  background: #000 url(/assets/black_denim.png);
 }
