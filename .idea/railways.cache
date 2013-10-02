@@ -1,0 +1,69 @@
+                         Prefix Verb   URI Pattern                                                                        Controller#Action
+                        log_out GET    /log_out(.:format)                                                                 sessions#destroy
+                        sign_up GET    /sign_up(.:format)                                                                 users#new
+                        sign_in GET    /sign_in(.:format)                                                                 sessions#new
+              user_group_events GET    /users/:user_id/groups/:group_id/events(.:format)                                  events#index
+                                POST   /users/:user_id/groups/:group_id/events(.:format)                                  events#create
+           new_user_group_event GET    /users/:user_id/groups/:group_id/events/new(.:format)                              events#new
+          edit_user_group_event GET    /users/:user_id/groups/:group_id/events/:id/edit(.:format)                         events#edit
+               user_group_event GET    /users/:user_id/groups/:group_id/events/:id(.:format)                              events#show
+                                PATCH  /users/:user_id/groups/:group_id/events/:id(.:format)                              events#update
+                                PUT    /users/:user_id/groups/:group_id/events/:id(.:format)                              events#update
+                                DELETE /users/:user_id/groups/:group_id/events/:id(.:format)                              events#destroy
+      user_group_gallery_photos GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/photos(.:format)            photos#index
+                                POST   /users/:user_id/groups/:group_id/galleries/:gallery_id/photos(.:format)            photos#create
+   new_user_group_gallery_photo GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/photos/new(.:format)        photos#new
+  edit_user_group_gallery_photo GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/photos/:id/edit(.:format)   photos#edit
+       user_group_gallery_photo GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/photos/:id(.:format)        photos#show
+                                PATCH  /users/:user_id/groups/:group_id/galleries/:gallery_id/photos/:id(.:format)        photos#update
+                                PUT    /users/:user_id/groups/:group_id/galleries/:gallery_id/photos/:id(.:format)        photos#update
+                                DELETE /users/:user_id/groups/:group_id/galleries/:gallery_id/photos/:id(.:format)        photos#destroy
+    user_group_gallery_comments GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/comments(.:format)          comments#index
+                                POST   /users/:user_id/groups/:group_id/galleries/:gallery_id/comments(.:format)          comments#create
+ new_user_group_gallery_comment GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/comments/new(.:format)      comments#new
+edit_user_group_gallery_comment GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/comments/:id/edit(.:format) comments#edit
+     user_group_gallery_comment GET    /users/:user_id/groups/:group_id/galleries/:gallery_id/comments/:id(.:format)      comments#show
+                                PATCH  /users/:user_id/groups/:group_id/galleries/:gallery_id/comments/:id(.:format)      comments#update
+                                PUT    /users/:user_id/groups/:group_id/galleries/:gallery_id/comments/:id(.:format)      comments#update
+                                DELETE /users/:user_id/groups/:group_id/galleries/:gallery_id/comments/:id(.:format)      comments#destroy
+           user_group_galleries GET    /users/:user_id/groups/:group_id/galleries(.:format)                               galleries#index
+                                POST   /users/:user_id/groups/:group_id/galleries(.:format)                               galleries#create
+         new_user_group_gallery GET    /users/:user_id/groups/:group_id/galleries/new(.:format)                           galleries#new
+        edit_user_group_gallery GET    /users/:user_id/groups/:group_id/galleries/:id/edit(.:format)                      galleries#edit
+             user_group_gallery GET    /users/:user_id/groups/:group_id/galleries/:id(.:format)                           galleries#show
+                                PATCH  /users/:user_id/groups/:group_id/galleries/:id(.:format)                           galleries#update
+                                PUT    /users/:user_id/groups/:group_id/galleries/:id(.:format)                           galleries#update
+                                DELETE /users/:user_id/groups/:group_id/galleries/:id(.:format)                           galleries#destroy
+                    user_groups GET    /users/:user_id/groups(.:format)                                                   groups#index
+                                POST   /users/:user_id/groups(.:format)                                                   groups#create
+                 new_user_group GET    /users/:user_id/groups/new(.:format)                                               groups#new
+                edit_user_group GET    /users/:user_id/groups/:id/edit(.:format)                                          groups#edit
+                     user_group GET    /users/:user_id/groups/:id(.:format)                                               groups#show
+                                PATCH  /users/:user_id/groups/:id(.:format)                                               groups#update
+                                PUT    /users/:user_id/groups/:id(.:format)                                               groups#update
+                                DELETE /users/:user_id/groups/:id(.:format)                                               groups#destroy
+            user_groupsandusers GET    /users/:user_id/groupsandusers(.:format)                                           groupsandusers#index
+                                POST   /users/:user_id/groupsandusers(.:format)                                           groupsandusers#create
+         new_user_groupsanduser GET    /users/:user_id/groupsandusers/new(.:format)                                       groupsandusers#new
+        edit_user_groupsanduser GET    /users/:user_id/groupsandusers/:id/edit(.:format)                                  groupsandusers#edit
+             user_groupsanduser GET    /users/:user_id/groupsandusers/:id(.:format)                                       groupsandusers#show
+                                PATCH  /users/:user_id/groupsandusers/:id(.:format)                                       groupsandusers#update
+                                PUT    /users/:user_id/groupsandusers/:id(.:format)                                       groupsandusers#update
+                                DELETE /users/:user_id/groupsandusers/:id(.:format)                                       groupsandusers#destroy
+                          users GET    /users(.:format)                                                                   users#index
+                                POST   /users(.:format)                                                                   users#create
+                       new_user GET    /users/new(.:format)                                                               users#new
+                      edit_user GET    /users/:id/edit(.:format)                                                          users#edit
+                           user GET    /users/:id(.:format)                                                               users#show
+                                PATCH  /users/:id(.:format)                                                               users#update
+                                PUT    /users/:id(.:format)                                                               users#update
+                                DELETE /users/:id(.:format)                                                               users#destroy
+                       sessions GET    /sessions(.:format)                                                                sessions#index
+                                POST   /sessions(.:format)                                                                sessions#create
+                    new_session GET    /sessions/new(.:format)                                                            sessions#new
+                   edit_session GET    /sessions/:id/edit(.:format)                                                       sessions#edit
+                        session GET    /sessions/:id(.:format)                                                            sessions#show
+                                PATCH  /sessions/:id(.:format)                                                            sessions#update
+                                PUT    /sessions/:id(.:format)                                                            sessions#update
+                                DELETE /sessions/:id(.:format)                                                            sessions#destroy
+                           root GET    /                                                                                  sessions#new
