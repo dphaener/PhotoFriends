@@ -11,12 +11,12 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20130927082356) do
+ActiveRecord::Schema.define(version: 20131001185333) do
 
   create_table "comments", force: true do |t|
     t.integer  "user_id"
     t.integer  "gallery_id"
-    t.string   "text"
+    t.text     "text"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "comment_id"
@@ -83,7 +83,7 @@ ActiveRecord::Schema.define(version: 20130927082356) do
     t.string   "username"
     t.string   "password_hash"
     t.string   "password_salt"
-    t.string   "avatar",        default: "default_avatar.jpg"
+    t.string   "avatar"
     t.integer  "userlevel"
     t.datetime "created_at"
     t.datetime "updated_at"

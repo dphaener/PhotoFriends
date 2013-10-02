@@ -50,10 +50,18 @@
       
       <div class="field form-group">
         <%= f.label :avatar, class: "text-primary field-label control-label col-lg-2" %>
-        <div class="fileupload fileupload-new" data-provides="fileupload">
+        <% if request.path == edit_user_path(current_user) %>
+            <div class="fileupload fileupload-exists" data-provides="fileupload">
+        <% else %>
+            <div class="fileupload fileupload-new" data-provides="fileupload">
+        <% end %>
           <div class="col-lg-10">
-            <div class="fileupload-preview thumbnail" style="width: 70px; height: 70px; border-radius: 50%;">
-              <%= image_tag(@user.avatar, size: "70x70", class: "avtr") %>
+            <div class="fileupload-preview thumbnail avtr">
+              <% if @user.avatar.blank? %>
+                <%= image_tag("/assets/default_avatar.jpg") %>
+              <% else %>
+                <%= image_tag(@user.avatar) %>
+              <% end %>
             </div>
             <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><%= f.file_field :avatar %></span>
             <a href="#" class="btn fileupload-exists btn-danger" data-dismiss="fileupload">Remove</a>

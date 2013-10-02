@@ -1,7 +1,15 @@
-<script>changetofriends()</script>
+<script>
+    <% if !@photos.blank? %>
+        <% randomback = Photo.where(gallery_id: @gallery.sample.id).take %>
+        randombackground('<%= randomback.image %>');
+    <% else %>
+        changetofriends();
+    <% end %>
+</script>
+
 <p id="notice"><%= notice %></p>
 <div class="jumbotron">
-  <h1><%= @group.name %></h1>
+  <h1><%= @group.name %></h1><span class="glyphicon glyphicon-photo"></span>
   <% if @gallery.blank? %>
     <h2>You have no galleries!</h2>
     <div class="col-md-3 col-md-offset-5">  
@@ -20,9 +28,9 @@
                     <% randomphoto = Photo.new if randomphoto.blank? %>
                     <%= image_tag(randomphoto.image_url(:preview)) %>
                     <div class="btn-group gallery-btns">
-                        <%= link_to "Edit Gallery", edit_user_group_gallery_path(@user.id, @group.id, g.id), class: "btn btn-default btn-gall-edit col-md-3" %>
-                        <%= link_to "Show Gallery", user_group_gallery_path(@user, @group, g.id), class: "btn btn-default btn-gall-show col-md-6" %>
-                        <%= link_to "Add Photo", new_user_group_gallery_photo_path(@user.id, @group.id, g.id), class: "btn btn-default btn-photo-add col-md-3" %>
+                        <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), class: "btn btn-default btn-gall-edit col-md-3" %>
+                        <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), class: "btn btn-default btn-gall-show col-md-6" %>
+                        <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), class: "btn btn-default btn-photo-add col-md-3" %>
                     </div>
                   </div>
                 </div>

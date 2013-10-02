@@ -15,10 +15,6 @@
 //= require turbolinks
 //= require bootstrap
 //= require bootstrap-file-upload/bootstrap-fileupload.min
-//= require blueimp/blueimp-helper
-//= require blueimp/blueimp-gallery
-//= require blueimp/blueimp-gallery-fullscreen
-//= require blueimp/blueimp-gallery-indicator
-//= require blueimp/jquery.blueimp-gallery.min
 //= require custom
+//= require blueimp/blueimp-gallery.min
 //= require_tree .

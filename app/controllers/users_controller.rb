@@ -41,7 +41,7 @@ class UsersController < ApplicationController
   def update
     respond_to do |format|
       if @user.update(user_params)
-        format.html { redirect_to user_groups_path(@user), notice: 'User was successfully updated.' }
+        format.html { redirect_to user_group_path(@user), notice: 'User was successfully updated.' }
       else
         format.html { render action: 'edit' }
       end
@@ -66,6 +66,6 @@ class UsersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def user_params
-      params.require(:user).permit(:email, :username, :password, :password_confirmation, :avatar, :userlevel, :id)
+      params.require(:user).permit(:email, :username, :password, :password_confirmation, :avatar, :userlevel, :id, :name)
     end
 end
