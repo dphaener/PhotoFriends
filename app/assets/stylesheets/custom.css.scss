@@ -109,6 +109,7 @@
 
 .jumbotron h1 {
   padding: 20px;
+  height: auto;
 }
 
 body {
@@ -120,23 +121,16 @@ body {
 }
 
 
-.fileupload-preview .avtr > img {
-  height: 70px;
-  width: 70px;
-}
-
-.fileupload .thumbnail .avtr {
-  margin: 0 !important;
-  padding: 0 !important;
+.fileupload-preview.thumbnail.avtr {
+  height: 70px !important;
+  width: 70px !important;
+  padding: 0;
   border-radius: 50%;
 }
 
-.fileupload-preview .upload > img {
-  height: 300px;
-  width: 300px;
-}
-
 .fileupload .thumbnail .upload {
+  height: 300px !important;
+  width: 300px !important;
   margin: 0 !important;
   padding: 0 !important;
 }
@@ -195,6 +189,7 @@ body {
   height: 100%;
   padding-top: 4%;
   border-top-left-radius: 0;
+  border-bottom-left-radius: 20px;
   padding-left: 2%;
   background: #000 url(/assets/black_denim.png);
 }
@@ -209,6 +204,8 @@ body {
   height: 100%;
   padding-top: 4%;
   background: #000 url(/assets/black_denim.png);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 0;
 }
 
 .gallery .btn:hover{
@@ -302,3 +299,14 @@ textarea {
   background-color: darkslategray;
   color: cornsilk !important;
 }
+
+.gallery-title {
+  font-size: 50px;
+  color: white;
+  padding: 10px;
+}
+
+.gallery-header {
+  height: 70px;
+}
+

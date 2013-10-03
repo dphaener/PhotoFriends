@@ -60,7 +60,7 @@
               <% if @user.avatar.blank? %>
                 <%= image_tag("/assets/default_avatar.jpg") %>
               <% else %>
-                <%= image_tag(@user.avatar) %>
+                <%= image_tag(@user.avatar_url) %>
               <% end %>
             </div>
             <span class="btn btn-file btn-primary"><span class="fileupload-new">Select image</span><span class="fileupload-exists">Change</span><%= f.file_field :avatar %></span>
@@ -75,6 +75,4 @@
   </div>
 </div>
 
-<script>
-  changetofriends()
-</script>
+</div>

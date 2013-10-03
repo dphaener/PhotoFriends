@@ -49,14 +49,21 @@ group :development, :test do
   gem 'capybara'
 end
 
+# Use bcrypt for authentication
 gem "bcrypt-ruby", :require => "bcrypt"
 
+# Twitter Bootstrap plugin for easy prettification
 gem "bootstrap-sass", github: 'thomas-mcdonald/bootstrap-sass', branch: '3'
 
+# Bootstrap LESS plugin for custom bootswatch installations
 gem 'less-rails-bootstrap'
 
+# Carrierwave for awesomely easy file uploads
 gem 'carrierwave'
 
+# Rmagick for easy image manipulation
 gem 'rmagick'
 
+# Blueimp image gallery
 gem "blueimp-gallery-rails", "~> 2.7.0"
+

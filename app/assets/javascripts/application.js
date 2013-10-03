@@ -17,4 +17,6 @@
 //= require bootstrap-file-upload/bootstrap-fileupload.min
 //= require custom
 //= require blueimp/blueimp-gallery.min
+//= require jquery-bigtext/jquery-bigtext
+//= require bootstrap-tipover/tipover.js
 //= require_tree .

@@ -1,4 +1,3 @@
-<script>changetofriends()</script>
 <div class = "jumbotron" style="overflow:hidden;">
   <h1>You do not belong to any groups!</h1><br />
   <div class="col-md-offset-5 col-md-2 gray-box">
@@ -8,4 +7,8 @@
   </div>
 </div>
 
-  
+<script>
+    $(document).ready(function(){
+        setbackground("<%= get_background("0") %>");
+    });
+</script>

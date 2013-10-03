@@ -1,5 +1,6 @@
 class UsersController < ApplicationController
   before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :set_group
 
   # GET /users
   # GET /users.json
@@ -62,6 +63,13 @@ class UsersController < ApplicationController
     # Use callbacks to share common setup or constraints between actions.
     def set_user
       @user = User.find(params[:id])
+    end
+
+    def set_group
+      @group = GroupsAndUsers.where(user_id: params[:id]).take
+      if @group.blank?
+        @group = GroupsAndUsers.new group_id: 0
+      end
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

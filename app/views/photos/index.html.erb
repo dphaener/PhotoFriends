@@ -1,33 +1,37 @@
-<h1>Listing photos</h1>
+<div class="jumbotron">
+    <h1>Edit Photo Collection</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>Caption</th>
-      <th>Name</th>
-      <th>Path</th>
-      <th>Gallery</th>
-      <th></th>
-      <th></th>
-      <th></th>
-    </tr>
-  </thead>
+    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
+      <div class="slides"></div>
+      <h3 class="title"></h3>
+      <a class="prev">‹</a>
+      <a class="next">›</a>
+      <a class="close">×</a>
+      <a class="play-pause"></a>
+      <ol class="indicator"></ol>
+    </div>
+    <div id="links">
+        <% @photos.each do |photo| %>
+          <a href="<%= photo.image_url(:background) %>" title="<%= photo.caption %>">
+            <img src="<%= photo.image_url(:thumb) %>" alt="Banana">
+          </a>
+        <% end %>
+     </div>
+</div>
 
-  <tbody>
-    <% @photos.each do |photo| %>
-      <tr>
-        <td><%= photo.caption %></td>
-        <td><%= photo.name %></td>
-        <td><%= photo.path %></td>
-        <td><%= photo.gallery %></td>
-        <td><%= link_to 'Show', photo %></td>
-        <td><%= link_to 'Edit', edit_photo_path(photo) %></td>
-        <td><%= link_to 'Destroy', photo, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<script>
+    $(document).ready(function(){
+        setbackground("<%= get_background(@group.id) %>");
+        document.getElementById('links').onclick = function (event) {
+            event = event || window.event;
+            var target = event.target || event.srcElement,
+                    link = target.src ? target.parentNode : target,
+                    options = {index: link, event: event},
+                    links = this.getElementsByTagName('a');
+            blueimp.Gallery(links, options);
+        };
+    });
+</script>
 
-<br>
 
-<%= link_to 'New Photo', new_photo_path %>
+

@@ -1,4 +1,3 @@
-<script src="/assets/blueimp/blueimp-gallery.min.js"></script>
 <div class="jumbotron">
   <h1 class="gallery-header"><%= @gallery.name %></h1>
   <div id="blueimp-gallery-carousel" class="blueimp-gallery blueimp-gallery-carousel blueimp-gallery-controls blueimp-gallery-display">
@@ -20,9 +19,10 @@
         <% end %>
     </div>
   <% end %>
-  <div class="btn-group col-md-offset-4 col-md-4 gall-btns">
-    <%= link_to "Add Photo", new_user_group_gallery_photo_path(@user.id, @group.id, @gallery.id), class: "btn btn-primary col-md-6" %>
-    <%= link_to "Back to Galleries", user_group_path(@user, @group), class: "btn btn-primary col-md-6" %>
+  <div class="btn-group col-md-offset-3 col-md-6 gall-btns">
+    <%= link_to 'Add Photo', new_user_group_gallery_photo_path(@user.id, @group.id, @gallery.id), class: "btn btn-primary col-md-4" %>
+    <%= link_to 'Edit Photo Collection', user_group_gallery_photos_path(@user, @group, @gallery), class: "btn btn-primary col-md-4" %>
+    <%= link_to 'Back to Galleries', user_group_path(@user, @group), class: "btn btn-primary col-md-4" %>
   </div>
   <br />
   <div class="comment-section">
@@ -46,11 +46,11 @@
       <% end %>
   </div>
   <% if @comments.blank? %>
-    <div class="col-md-4 col-md-offset-4 alert-danger" id="no-comm">
-      <h4>No comments yet. Why not make one?</h3>
-    </div>
+    <button id="no-comm" class="col-md-4 col-md-offset-4 alert-danger" onclick="show_comment();">No comments yet. Why not make one?</button>
+  <% else %>
+      <button id="show_new_comment" class="btn btn-sm btn-primary col-md-2 col-md-offset-5" onclick="show_comment();">New Comment</button>
   <% end %>
-  <button id="show_new_comment" class="btn btn-sm btn-primary col-md-2 col-md-offset-5" onclick="show_comment();">New Comment</button>
+
   <div class="">
     <div class="new-comment form-inline pull-right" id="new-comment" style="visibility: hidden;" role="form">
       <script>set_comment_back('new-comment');</script>
@@ -80,9 +80,10 @@
   <br />
 </div>
 
-
+<script src="/assets/blueimp/blueimp-gallery.min.js"></script>
 <script>
-    <% randomback = Photo.where(gallery_id: @gallery.id).take %>
-    randombackground('<%= randomback.image_url(:background) %>');
-    $(document).ready(function() { init_gallery(); });
+    $(document).ready(function(){
+        setbackground("<%= get_background(@group.id) %>");
+        init_gallery();
+    });
 </script>

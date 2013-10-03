@@ -27,6 +27,6 @@ set_comment_back=function(comment_id) {
     $('#'+comment_id).css("background-color", random_color);
 }
 
-randombackground=function(filepath) {
+setbackground=function(filepath) {
     $(document.body).css("background-image", 'url('+filepath+')');
 }

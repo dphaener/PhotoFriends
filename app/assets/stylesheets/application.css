@@ -14,6 +14,8 @@
  *= require custom
  *= require bootstrap-file-upload/bootstrap-fileupload.min
  *= require blueimp/blueimp-gallery.min
+ *= require bootstrap-tipover/popover-custom
+ *= require bootstrap-tipover/popover
  *= require_tree .
  */
 

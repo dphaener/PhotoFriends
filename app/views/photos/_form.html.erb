@@ -44,4 +44,8 @@
     </div>
 <% end %>
 
-<script>changetofriends()</script>
+<script>
+    $(document).ready(function(){
+        setbackground("<%= get_background(@group.id) %>");
+    });
+</script>

@@ -1,15 +1,6 @@
-<script>
-    <% if !@photos.blank? %>
-        <% randomback = Photo.where(gallery_id: @gallery.sample.id).take %>
-        randombackground('<%= randomback.image %>');
-    <% else %>
-        changetofriends();
-    <% end %>
-</script>
-
 <p id="notice"><%= notice %></p>
 <div class="jumbotron">
-  <h1><%= @group.name %></h1><span class="glyphicon glyphicon-photo"></span>
+  <h1 id="group-members" title="<h3 style='margin-top: 8px;'>Group Members</h3>" data-content='<%= get_members(@group.id) %>'><%= @group.name %></h1>
   <% if @gallery.blank? %>
     <h2>You have no galleries!</h2>
     <div class="col-md-3 col-md-offset-5">  
@@ -23,14 +14,17 @@
               <% slice.each do |g| %>
                 <div class="col-md-4 gallery-cont">
                  <div class="gallery">
-                    <h2><%= g.name %></h2>
+                    <div class="gallery-header">
+                        <span id="span-<%= g.id %>" class="gallery-title"><%= g.name %></span>
+                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script>
+                    </div>
                     <% randomphoto = Photo.where(gallery_id: g.id).take %>
                     <% randomphoto = Photo.new if randomphoto.blank? %>
                     <%= image_tag(randomphoto.image_url(:preview)) %>
                     <div class="btn-group gallery-btns">
-                        <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), class: "btn btn-default btn-gall-edit col-md-3" %>
-                        <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), class: "btn btn-default btn-gall-show col-md-6" %>
-                        <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), class: "btn btn-default btn-photo-add col-md-3" %>
+                        <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-gall-edit col-md-3", title: "Edit gallery", id: "edit-gal-", 'data-toggle' => "tooltip"} %>
+                        <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), { class: "btn btn-default btn-lg btn-gall-show col-md-6", title: "View gallery", id: "show-gal-", 'data-toggle' => "tooltip" } %>
+                        <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-photo-add col-md-3", title: "Add new photo", id: "add-pic-", 'data-toggle' => "tooltip" } %>
                     </div>
                   </div>
                 </div>
@@ -45,3 +39,17 @@
   </div>
   </div>
 
+<script>
+    $(document).ready(function(){
+        setbackground("<%= get_background(@group.id) %>");
+        $("[id^=edit-gal-]").tooltip({ trigger: "hover", container: 'body' });
+        $("[id^=show-gal-]").tooltip({ trigger: "hover", container: 'body' });
+        $("[id^=add-pic-]").tooltip({ trigger: "hover", container: 'body' });
+        $('#group-members').popover(poOptions('blueWhite', {
+            'placement': 'bottom',
+            'html': true,
+            'trigger': 'hover',
+            'animation': 'true'
+        }));
+    });
+</script>

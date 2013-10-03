@@ -9,7 +9,6 @@ class GroupsController < ApplicationController
   # GET /groups/1.json
   def show
     @gallery = Gallery.where(group_id: @group.id).to_a
-    @photos = Photo.where(gallery_id: @gallery.sample.id).to_a
   end
 
   # GET /groups/new

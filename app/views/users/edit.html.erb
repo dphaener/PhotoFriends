@@ -1,3 +1,7 @@
 <%= render 'form' %>
 
-
+<script>
+    $(document).ready(function(){
+        setbackground("<%= get_background(@group.group_id) %>");
+    });
+</script>
