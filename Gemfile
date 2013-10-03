@@ -67,3 +67,8 @@ gem 'rmagick'
 # Blueimp image gallery
 gem "blueimp-gallery-rails", "~> 2.7.0"
 
+gem "puma"
+
+ruby '2.0.0'
+
+gem 'rails_12factor'
