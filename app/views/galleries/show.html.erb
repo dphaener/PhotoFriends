@@ -29,8 +29,7 @@
       <% @comments.each do |comment| %>
         <div class="comment pull-right" id="comment-<%= comment.id %>">
           <script>set_comment_back('comment-<%= comment.id %>');</script>
-          <% user = get_user(comment.user_id) %>
-          <%= image_tag(user.avatar, size: "80x80", class: "img-circle pull-left") %>
+          <%= image_tag(comment.user.avatar, size: "80x80", class: "img-circle pull-left") %>
           <div class="comment-panel pull-left">
               <p class="comment-time pull-right">
                 <%= comment.updated_at.strftime("%B %-d, %Y") %>
@@ -39,7 +38,7 @@
                 <%= comment.updated_at.strftime("%l:%M %p") %>
               </p>
               <p class="comment-username pull-right">
-                <%= user.username.capitalize %><span class="tiny">said</span>
+                <%= comment.user.username.capitalize %><span class="tiny">said</span>
               </p>
           </div>
           <p class="comment-text pull-left">
