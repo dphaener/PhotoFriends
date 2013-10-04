@@ -38,6 +38,9 @@
         <div class="field">
         <%= f.hidden_field :gallery, value: @gallery.id %>
         </div>
+        <div>
+          <p class='alert-danger'>Special characters such as single quotes or double quotes are not allowed in the caption field!!!</p>
+        </div>
         <div class="actions">
         <%= f.submit "Save Photo", class: "btn btn-primary pull-right" %>
         </div>
