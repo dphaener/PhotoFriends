@@ -56,11 +56,10 @@ class GroupsController < ApplicationController
   # DELETE /groups/1
   # DELETE /groups/1.json
   def destroy
+    GroupsAndUsers.where(group_id: @group.id).destroy_all
     @group.destroy
-    respond_to do |format|
-      format.html { redirect_to user_groups_url }
-      format.json { head :no_content }
-    end
+    set_last_group
+    redirect_to user_group_path(@user.id, @group.id)
   end
   
   private
@@ -76,5 +75,21 @@ class GroupsController < ApplicationController
     # Never trust parameters from the scary internet, only allow the white list through.
     def group_params
       params.require(:group).permit(:owner, :name, :password, :password_confirmation, :user_id)
+    end
+
+    def set_last_group
+      if session[:user_id]
+        usergroups = GroupsAndUsers.where(user_id: session[:user_id]).to_a
+        groups = []
+        if !usergroups.empty?
+          usergroups.each do |group|
+            groups << Group.find_by(id: group.group_id)
+          end
+          sorted = groups.sort {|g,h| h[:updated_at] <=> g[:updated_at]}
+          @group = Group.find_by(id: sorted[0].id)
+        else
+          nil
+        end
+      end
     end
 end

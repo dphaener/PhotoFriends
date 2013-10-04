@@ -24,6 +24,9 @@
           <%= f.hidden_field :group, value: @group.id %><br />
         </div>
         <div class="actions">
+          <%= link_to "Remove Gallery", user_group_gallery_path(@user.id, @group.id, @gallery.id), method: :delete, class: "btn btn-primary pull-left", data: { confirm: 'Are you sure?' } %>
+        </div>
+        <div class="actions">
           <%= f.submit "Save Gallery", class: "btn btn-primary pull-right" %>
         </div>
       </div>

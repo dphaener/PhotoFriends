@@ -19,4 +19,5 @@
 //= require blueimp/blueimp-gallery.min
 //= require jquery-bigtext/jquery-bigtext
 //= require bootstrap-tipover/tipover.js
+//= require jquery.ui.dialog
 //= require_tree .

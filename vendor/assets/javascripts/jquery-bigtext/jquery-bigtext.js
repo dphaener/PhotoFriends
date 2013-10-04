@@ -51,8 +51,8 @@ Copyright (C) 2013 Daniel Hoffmann Bernardes, Icaro Technologies
             $this.css('line-height', "1000px");
             $this.css('position', "relative");
             $this.css('white-space', "nowrap");
-            $this.css('top', "48%");
-            $this.css('left', "45%");
+            $this.css('top', "32%");
+            $this.css('left', "47%");
             $this.css('padding', 10);
             $this.css('margin', 0);
             

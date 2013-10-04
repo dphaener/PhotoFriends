@@ -60,7 +60,7 @@ class GalleriesController < ApplicationController
   def destroy
     @gallery.destroy
     respond_to do |format|
-      format.html { redirect_to user_group_galleries_path(@user, @group) }
+      format.html { redirect_to user_groups_path(@user) }
       format.json { head :no_content }
     end
   end

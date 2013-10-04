@@ -1,7 +1,41 @@
 <div class="jumbotron">
   <h1>Edit group details</h1>
-  
-  <%= render 'form' %>
+
+  <%= form_for(@group, url: user_groups_path(current_user.id, @group)) do |f| %>
+      <% if @group.errors.any? %>
+          <div id="error_explanation">
+            <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>
+
+            <ul>
+              <% @group.errors.full_messages.each do |msg| %>
+                  <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+      <% end %>
+
+      <div class="form-group gray-box col-md-4 col-md-offset-4 form-joingroup">
+        <div class="field">
+          <%= f.hidden_field :owner, value: current_user.id %>
+        </div>
+        <div class="field">
+          <%= f.text_field :name, class: "form-control", placeholder: "Group Name" %>
+        </div>
+        <div class="field">
+          <%= f.password_field :password, class: "form-control password", placeholder: "Group Password" %>
+        </div>
+        <div class="field">
+          <%= f.password_field :password_confirmation, class: "form-control password-confirm", placeholder:"Confirm Password" %>
+        </div>
+        <div class="actions">
+          <%= link_to "Delete Group", user_group_path(@user.id, @group.id), method: :delete, class: "btn btn-primary pull-left", data: { confirm: 'Are you sure?' } %>
+        </div>
+        <div class="actions">
+          <%= f.submit "Save Group", class: "btn btn-primary pull-right" %>
+        </div>
+      </div>
+  <% end %>
+
 </div>
 
 <script>

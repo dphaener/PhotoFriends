@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.all
+    @photos = Photo.where(gallery_id: @gallery.id).to_a
   end
 
   # GET /photos/1
@@ -56,10 +56,7 @@ class PhotosController < ApplicationController
   # DELETE /photos/1.json
   def destroy
     @photo.destroy
-    respond_to do |format|
-      format.html { redirect_to photos_url }
-      format.json { head :no_content }
-    end
+    redirect_to user_group_gallery_photos_path(@user.id, @group.id, @gallery.id)
   end
 
   private

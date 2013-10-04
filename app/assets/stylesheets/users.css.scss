@@ -2,8 +2,9 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
-.field-label {
-  font-size: 18px;
-  font-variant: small-caps;
-  margin-top: -12px !important;
+.fileupload-preview.thumbnail.avtr {
+  height: 70px !important;
+  width: 70px !important;
+  padding: 0;
+  border-radius: 50%;
 }

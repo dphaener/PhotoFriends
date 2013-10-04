@@ -2,3 +2,78 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.form-joingroup input[type="text"] {
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-joingroup .password {
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  margin-bottom: -1px;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.form-joingroup .password-confirm {
+  margin-bottom: 10px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+}
+
+.form-joingroup .form-control:focus {
+  z-index: 2;
+}
+
+.form-joingroup .form-control {
+  position: relative;
+  font-size: 16px;
+  height: auto;
+  padding: 10px;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+.btns {
+  margin-top: 30px;
+}
+
+.gallery-btns {
+  width: 101%;
+  max-width: 110%;
+  overflow: hidden;
+  height: 50px;
+}
+
+.btn-gall-edit {
+  height: 100%;
+  padding-top: 4%;
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 20px;
+  padding-left: 2%;
+  background: #000 url(/assets/black_denim.png);
+}
+
+.btn-gall-show {
+  height: 100%;
+  padding-top: 4%;
+  background: #000 url(/assets/black_denim.png);
+}
+
+.btn-photo-add {
+  height: 100%;
+  padding-top: 4%;
+  background: #000 url(/assets/black_denim.png);
+  border-bottom-right-radius: 20px;
+  border-top-right-radius: 0;
+}
+
+.gallery .btn:hover{
+  background: darkslategray;
+}
+
+.btn-spc {
+  margin-right: 15px;
+}

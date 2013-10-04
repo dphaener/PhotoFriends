@@ -2,40 +2,129 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="8e683398-7bed-4340-a6f9-cb0abff85127" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/.generators" afterPath="$PROJECT_DIR$/.idea/.generators" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/1/DSC_0057.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/1/background_DSC_0057.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/1/large_DSC_0057.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/1/preview_DSC_0057.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/1/thumb_DSC_0057.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/13/IMG_20131002_095711.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/13/background_IMG_20131002_095711.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/13/large_IMG_20131002_095711.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/13/preview_IMG_20131002_095711.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/13/thumb_IMG_20131002_095711.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/14/IMG_20131002_095902.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/14/background_IMG_20131002_095902.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/14/large_IMG_20131002_095902.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/14/preview_IMG_20131002_095902.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/14/thumb_IMG_20131002_095902.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/15/IMG_20131002_101206.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/15/background_IMG_20131002_101206.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/15/large_IMG_20131002_101206.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/15/preview_IMG_20131002_101206.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/15/thumb_IMG_20131002_101206.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/16/IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/16/background_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/16/large_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/16/preview_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/16/thumb_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/17/background_macey.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/17/large_macey.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/17/macey.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/17/preview_macey.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/17/thumb_macey.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/18/IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/18/background_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/18/large_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/18/preview_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/18/thumb_IMG_20131002_101214.jpg" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/2/DSC_0079.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/2/background_DSC_0079.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/2/large_DSC_0079.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/2/preview_DSC_0079.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/2/thumb_DSC_0079.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/5/DSC_0020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/5/background_DSC_0020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/5/large_DSC_0020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/5/preview_DSC_0020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/5/thumb_DSC_0020.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/6/DSC_0021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/6/background_DSC_0021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/6/large_DSC_0021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/6/preview_DSC_0021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/6/thumb_DSC_0021.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/7/DSC_0022.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/7/background_DSC_0022.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/7/large_DSC_0022.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/7/preview_DSC_0022.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/7/thumb_DSC_0022.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/8/DSC_0023.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/8/background_DSC_0023.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/8/large_DSC_0023.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/8/preview_DSC_0023.JPG" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/uploads/photo/image/8/thumb_DSC_0023.JPG" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile.lock" afterPath="$PROJECT_DIR$/Gemfile.lock" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gemfile" afterPath="$PROJECT_DIR$/Gemfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/PhotoFriends.iml" afterPath="$PROJECT_DIR$/.idea/PhotoFriends.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/application.js" afterPath="$PROJECT_DIR$/app/assets/javascripts/application.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/galleries/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/galleries/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/groups/edit.html.erb" afterPath="$PROJECT_DIR$/app/views/groups/edit.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/galleries.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/galleries.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/galleries.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/galleries.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/galleries_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/helpers/galleries_helper.rb" afterPath="$PROJECT_DIR$/app/helpers/galleries_helper.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/gallery.rb" afterPath="$PROJECT_DIR$/app/models/gallery.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/models/group.rb" afterPath="$PROJECT_DIR$/app/models/group.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/groups.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/groups.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/groups_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/groups_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/index.html.erb" afterPath="$PROJECT_DIR$/app/views/photos/index.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/vendor/assets/javascripts/jquery-bigtext/jquery-bigtext.js" afterPath="$PROJECT_DIR$/vendor/assets/javascripts/jquery-bigtext/jquery-bigtext.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/photos/new.html.erb" afterPath="$PROJECT_DIR$/app/views/photos/new.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/photos.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/photos.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/javascripts/photos.js.coffee" afterPath="$PROJECT_DIR$/app/assets/javascripts/photos.js.coffee" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/controllers/photos_controller.rb" afterPath="$PROJECT_DIR$/app/controllers/photos_controller.rb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/views/galleries/show.html.erb" afterPath="$PROJECT_DIR$/app/views/galleries/show.html.erb" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/app/assets/stylesheets/users.css.scss" afterPath="$PROJECT_DIR$/app/assets/stylesheets/users.css.scss" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="PhotoFriends.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380766297967" ignored="false" />
+    <file path="/Dummy.txt" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380913169340" ignored="false" />
     <file path="/database.yml" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380567411667" ignored="false" />
     <file path="/avatar_uploader.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380662979046" ignored="false" />
     <file path="/image_uploader.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380756849430" ignored="false" />
-    <file path="/show.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380755969470" ignored="false" />
-    <file path="/custom.css.scss" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380755733590" ignored="false" />
-    <file path="/edit.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380584151476" ignored="false" />
-    <file path="/galleries_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380656828518" ignored="false" />
+    <file path="/show.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380859463334" ignored="false" />
+    <file path="/custom.css.scss" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380776313669" ignored="false" />
+    <file path="/edit.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380849347529" ignored="false" />
+    <file path="/galleries_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380849429792" ignored="false" />
     <file path="/a.html" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380584883127" ignored="false" />
-    <file path="/_form.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380757319675" ignored="false" />
-    <file path="/photos_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380608545452" ignored="false" />
-    <file path="/application.css" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380754812815" ignored="false" />
-    <file path="/custom.js" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380730660881" ignored="false" />
+    <file path="/_form.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380849280855" ignored="false" />
+    <file path="/photos_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380846741602" ignored="false" />
+    <file path="/application.css" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380841012893" ignored="false" />
+    <file path="/custom.js" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380847409053" ignored="false" />
     <file path="/20131001183057_remove_default_from_users_avatar.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380652345361" ignored="false" />
     <file path="/20131001185333_change_text_column_to_text_comments.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380653753166" ignored="false" />
     <file path="/comments_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380656412127" ignored="false" />
-    <file path="/gallery.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380656480512" ignored="false" />
+    <file path="/gallery.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380848942825" ignored="false" />
     <file path="/users_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380737188129" ignored="false" />
-    <file path="/groups_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380672972032" ignored="false" />
+    <file path="/groups_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380858188324" ignored="false" />
     <file path="/application_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380752638295" ignored="false" />
-    <file path="/Ruby Console" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380748054040" ignored="false" />
+    <file path="/Ruby Console" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380851135809" ignored="false" />
     <file path="/Gemfile" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380769560362" ignored="false" />
     <file path="/jquery-bigtext.js" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380745285109" ignored="false" />
     <file path="/groups.js.coffee" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380748272465" ignored="false" />
     <file path="/popover.less" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380755332969" ignored="false" />
     <file path="/_navbar.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380756062047" ignored="false" />
-    <file path="/index.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380757342570" ignored="false" />
+    <file path="/index.html.erb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380845900972" ignored="false" />
+    <file path="/groups.css.scss" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380777408261" ignored="false" />
+    <file path="/photos.css.scss" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380845522273" ignored="false" />
+    <file path="/photos.js.coffee" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380835896849" ignored="false" />
+    <file path="/group.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380848927289" ignored="false" />
+    <file path="/sessions_controller.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380850805874" ignored="false" />
+    <file path="/sessions.css.scss" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380851357175" ignored="false" />
+    <file path="/galleries.css.scss" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380852117880" ignored="false" />
+    <file path="/galleries_helper.rb" changelist="8e683398-7bed-4340-a6f9-cb0abff85127" time="1380859439031" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -60,44 +149,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="custom.css.scss" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="111" column="14" selection-start="3532" selection-end="3532" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Gemfile" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Gemfile">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="21" selection-start="1774" selection-end="1774" vertical-scroll-proportion="1.4145728">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="show.html.erb" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/views/galleries/show.html.erb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="88" column="14" selection-start="3702" selection-end="3845" vertical-scroll-proportion="0.0">
+            <state line="37" column="55" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/index.html.erb">
+      <file leaf-file-name="galleries_helper.rb" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/helpers/galleries_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="10" column="45" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
+            <state line="1" column="20" selection-start="43" selection-end="43" vertical-scroll-proportion="0.024154589">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="_form.html.erb" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/app/views/photos/_form.html.erb">
+      <file leaf-file-name="application_helper.rb" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -127,22 +198,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/app/assets/javascripts/groups.js.coffee" />
-        <option value="$PROJECT_DIR$/app/controllers/application_controller.rb" />
-        <option value="$PROJECT_DIR$/app/assets/javascripts/application.js" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/application.css" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/popover.less" />
-        <option value="$PROJECT_DIR$/app/views/groups/show.html.erb" />
-        <option value="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-tipover/popover.less" />
-        <option value="$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss" />
-        <option value="$PROJECT_DIR$/app/views/layouts/_navbar.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/javascripts/custom.js" />
+        <option value="$PROJECT_DIR$/app/models/gallery.rb" />
+        <option value="$PROJECT_DIR$/app/views/galleries/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/galleries_controller.rb" />
+        <option value="$PROJECT_DIR$/app/models/group.rb" />
+        <option value="dbtable:/cab5d72f/4709f248-d19c-46d9-a6e3-7cbab7b32004/PhotoFriends_development.public.groups" />
+        <option value="dbtable:/cab5d72f/4709f248-d19c-46d9-a6e3-7cbab7b32004/PhotoFriends_development.public.groups_and_users" />
+        <option value="$PROJECT_DIR$/app/controllers/sessions_controller.rb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/sessions.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/photos/new.html.erb" />
+        <option value="$PROJECT_DIR$/app/assets/stylesheets/galleries.css.scss" />
+        <option value="$PROJECT_DIR$/app/views/groups/edit.html.erb" />
+        <option value="$PROJECT_DIR$/app/views/groups/_form.html.erb" />
+        <option value="$PROJECT_DIR$/app/controllers/groups_controller.rb" />
         <option value="$PROJECT_DIR$/app/views/galleries/show.html.erb" />
-        <option value="$PROJECT_DIR$/app/uploaders/image_uploader.rb" />
-        <option value="$PROJECT_DIR$/app/views/users/edit.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/new.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/users/_form.html.erb" />
-        <option value="$PROJECT_DIR$/app/views/photos/index.html.erb" />
-        <option value="$PROJECT_DIR$/Gemfile" />
+        <option value="$PROJECT_DIR$/app/helpers/galleries_helper.rb" />
       </list>
     </option>
   </component>
@@ -440,7 +511,7 @@
       <recent name="$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-tipover" />
     </key>
   </component>
-  <component name="RunManager" selected="Rails.Development: PhotoFriends">
+  <component name="RunManager" selected="Rake.spec">
     <configuration default="false" name="db:migrate" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
       <module name="PhotoFriends" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
@@ -488,6 +559,32 @@
       </EXTENSION>
       <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="db:reset" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
+      <method />
+    </configuration>
+    <configuration default="false" name="routes" type="RakeRunConfigurationType" factoryName="Rake" temporary="true">
+      <module name="PhotoFriends" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RUBY_ARGS" VALUE="-e $stdout.sync=true;$stderr.sync=true;load($0=ARGV.shift)" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="WORK DIR" VALUE="$PROJECT_DIR$" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="SHOULD_USE_SDK" VALUE="false" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="ALTERN_SDK_NAME" VALUE="" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="myPassParentEnvs" VALUE="true" />
+      <envs />
+      <EXTENSION ID="BundlerRunConfigurationExtension" bundleExecEnabled="false" />
+      <EXTENSION ID="JRubyRunConfigurationExtension" />
+      <EXTENSION ID="RubyCoverageRunConfigurationExtension" enabled="false" sample_coverage="true" track_test_folders="true" runner="rcov">
+        <COVERAGE_PATTERN ENABLED="true">
+          <PATTERN REGEXPS="/.rvm/" INCLUDED="false" />
+        </COVERAGE_PATTERN>
+      </EXTENSION>
+      <EXTENSION ID="org.jetbrains.plugins.ruby.motion.run.MotionSimulatorRunExtension" />
+      <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_NAME" VALUE="routes" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ARGS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_ATTACHED_TEST_FRAMEWORKS" VALUE="" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
@@ -708,6 +805,8 @@
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_TRACE" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_DRYRUN" VALUE="false" />
       <RAKE_RUN_CONFIG_SETTINGS_ID NAME="RAKE_TASK_OPTION_PREREQS" VALUE="false" />
+      <RunnerSettings RunnerId="RubyRunner" />
+      <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
     <configuration default="false" name="Production: PhotoFriends" type="RailsRunConfigurationType" factoryName="Rails">
@@ -764,20 +863,23 @@
       <ConfigurationWrapper RunnerId="RubyRunner" />
       <method />
     </configuration>
-    <list size="7">
+    <list size="8">
       <item index="0" class="java.lang.String" itemvalue="Rake.db:migrate" />
       <item index="1" class="java.lang.String" itemvalue="Rake.db:reset" />
-      <item index="2" class="java.lang.String" itemvalue="IRB console.Rails console: PhotoFriends" />
-      <item index="3" class="java.lang.String" itemvalue="Rake.test" />
-      <item index="4" class="java.lang.String" itemvalue="Rake.spec" />
-      <item index="5" class="java.lang.String" itemvalue="Rails.Production: PhotoFriends" />
-      <item index="6" class="java.lang.String" itemvalue="Rails.Development: PhotoFriends" />
+      <item index="2" class="java.lang.String" itemvalue="Rake.routes" />
+      <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: PhotoFriends" />
+      <item index="4" class="java.lang.String" itemvalue="Rake.test" />
+      <item index="5" class="java.lang.String" itemvalue="Rake.spec" />
+      <item index="6" class="java.lang.String" itemvalue="Rails.Production: PhotoFriends" />
+      <item index="7" class="java.lang.String" itemvalue="Rails.Development: PhotoFriends" />
     </list>
     <recent_temporary>
-      <list size="3">
+      <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Rake.db:reset" />
         <item index="1" class="java.lang.String" itemvalue="IRB console.Rails console: PhotoFriends" />
-        <item index="2" class="java.lang.String" itemvalue="Rake.db:migrate" />
+        <item index="2" class="java.lang.String" itemvalue="Rake.routes" />
+        <item index="3" class="java.lang.String" itemvalue="IRB console.Rails console: PhotoFriends" />
+        <item index="4" class="java.lang.String" itemvalue="IRB console.Rails console: PhotoFriends" />
       </list>
     </recent_temporary>
   </component>
@@ -821,28 +923,32 @@
       <created>1380758638505</created>
       <updated>1380758638505</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="Done for class purposes. Lot's of refactoring needed....">
+      <created>1380852625446</created>
+      <updated>1380852625446</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1368" height="768" extended-state="7" />
-    <editor active="false" />
+    <frame x="-1" y="0" width="1368" height="768" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32901135" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32868218" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20833333" sideWeight="0.67585087" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.20833333" sideWeight="0.68372095" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19545455" sideWeight="0.6775194" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.21969697" sideWeight="0.68372095" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3241491" sideWeight="0.5" order="10" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32248062" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Routes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.20378788" sideWeight="0.6775194" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3279483" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.31627908" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Routes" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.2810606" sideWeight="0.68372095" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32713178" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32921174" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -891,7 +997,7 @@
     <option name="WRAP_WHEN_TYPING_REACHES_RIGHT_MARGIN" value="false" />
     <option name="FORCE_NON_EMPTY_COMMENT" value="false" />
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="false" />
-    <option name="LAST_COMMIT_MESSAGE" value="Finished dynamic background. Added dynamic font size for gallery headers." />
+    <option name="LAST_COMMIT_MESSAGE" value="Done for class purposes. Lot's of refactoring needed...." />
     <option name="MAKE_NEW_CHANGELIST_ACTIVE" value="false" />
     <option name="OPTIMIZE_IMPORTS_BEFORE_PROJECT_COMMIT" value="false" />
     <option name="CHECK_FILES_UP_TO_DATE_BEFORE_COMMIT" value="false" />
@@ -908,97 +1014,100 @@
     <MESSAGE value="Switched to blueimp photo gallery and got it working. Started on comments." />
     <MESSAGE value="All major components working. Needs minor upgrades and lots of refactoring." />
     <MESSAGE value="Finished dynamic background. Added dynamic font size for gallery headers." />
+    <MESSAGE value="Done for class purposes. Lot's of refactoring needed...." />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/app/controllers/groups_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="61" column="52" selection-start="1678" selection-end="1678" vertical-scroll-proportion="0.5416667" />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cab5d72f/4709f248-d19c-46d9-a6e3-7cbab7b32004/PhotoFriends_development.public.groups_and_users">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="dbDummy://dbtable:/cab5d72f/4709f248-d19c-46d9-a6e3-7cbab7b32004/PhotoFriends_development.public.groups">
+      <provider editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+      <provider selected="true" editor-type-id="com.intellij.persistence.database.editor.DatabaseTableFileEditorProvider">
+        <state />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/groups/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="25" column="10" selection-start="974" selection-end="974" vertical-scroll-proportion="0.99206346" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/comments/show.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/_form.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/edit.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/index.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="-0.46825397" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/views/galleries/new.html.erb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/controllers/comments_controller.rb">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/controllers/application_controller.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="72" selection-start="1180" selection-end="1180" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/groups.js.coffee">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="0" selection-start="262" selection-end="262" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/vendor/assets/stylesheets/bootstrap-tipover/popover.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="3" column="43" selection-start="96" selection-end="96" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/groups/show.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="56" selection-start="113" selection-end="113" vertical-scroll-proportion="0.09009009" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/application.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="40" selection-start="749" selection-end="749" vertical-scroll-proportion="0.63492066" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/javascripts/application.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="20" column="40" selection-start="867" selection-end="867" vertical-scroll-proportion="0.7936508" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/layouts/_navbar.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="33" column="57" selection-start="1420" selection-end="1420" vertical-scroll-proportion="0.63559324" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/new.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="4" column="45" selection-start="110" selection-end="110" vertical-scroll-proportion="0.1734104" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/edit.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="9" selection-start="147" selection-end="147" vertical-scroll-proportion="0.2601156" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/users/_form.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="30" selection-start="3298" selection-end="3298" vertical-scroll-proportion="0.7297297" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/uploaders/image_uploader.rb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="39" column="36" selection-start="1111" selection-end="1111" vertical-scroll-proportion="0.47619048" />
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/app/views/galleries/show.html.erb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="88" column="14" selection-start="3702" selection-end="3845" vertical-scroll-proportion="0.0">
+        <state line="37" column="55" selection-start="1906" selection-end="1906" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photos/index.html.erb">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="10" column="45" selection-start="354" selection-end="354" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/views/photos/_form.html.erb">
+    <entry file="file://$PROJECT_DIR$/app/helpers/application_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/app/assets/stylesheets/custom.css.scss">
+    <entry file="file://$PROJECT_DIR$/app/helpers/galleries_helper.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="111" column="14" selection-start="3532" selection-end="3532" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Gemfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="73" column="21" selection-start="1774" selection-end="1774" vertical-scroll-proportion="1.4145728">
+        <state line="1" column="20" selection-start="43" selection-end="43" vertical-scroll-proportion="0.024154589">
           <folding />
         </state>
       </provider>

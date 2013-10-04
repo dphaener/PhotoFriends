@@ -1,3 +1,110 @@
 // Place all the styles related to the photos controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.fileupload .thumbnail .upload {
+  height: 300px !important;
+  width: 300px !important;
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+#thumbs > img {
+  width: 70px;
+  margin: 10px;
+}
+
+#dialog-photo {
+  width: 400px;
+  height: 300px;
+}
+
+.photo-thumb {
+  float: left;
+  margin-left: 10px;
+}
+
+.photo-thumb:hover {
+  cursor: pointer;
+}
+
+.ui-dialog {
+  background-image: url(/assets/black_denim.png);
+  background-repeat: repeat;
+  border: none;
+  overflow: hidden;
+  padding: 0;
+  border-radius: 8px;
+}
+
+.ui-dialog-titlebar {
+  float: right;
+  border: 0;
+  padding: 0 !important;
+  width: 0;
+  visibility: hidden;
+}
+
+.dialog-header {
+  width: 80%;
+  overflow: hidden;
+  position: absolute;
+  top: 0;
+  left: 10%;
+  border-radius: 0 0 8px 8px;
+}
+
+.dialog-header, .exit, .delete {
+  background: -moz-linear-gradient(top, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.8) 100%); /* FF3.6+ */
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0.8)), color-stop(100%,rgba(0,0,0,0.8))); /* Chrome,Safari4+ */
+  background: -webkit-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%); /* Chrome10+,Safari5.1+ */
+  background: -o-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%); /* Opera 11.10+ */
+  background: -ms-linear-gradient(top, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%); /* IE10+ */
+  background: linear-gradient(to bottom, rgba(0,0,0,0.8) 0%,rgba(0,0,0,0.8) 100%); /* W3C */
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#cc000000', endColorstr='#cc000000',GradientType=0 ); /* IE6-9 */
+}
+
+.dialog-header > h4 {
+  text-align: center;
+  color: #fff;
+}
+
+.exit {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  border-top-left-radius: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.exit:hover {
+  cursor: pointer;
+}
+
+.exit > img {
+  width: 40px;
+  position: absolute;
+  bottom: 5px;
+  right: 5px;
+}
+
+.delete {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border-top-right-radius: 20px;
+  width: 50px;
+  height: 50px;
+}
+
+.delete:hover {
+  cursor: pointer;
+}
+
+.delete > img {
+  width: 40px;
+  position: absolute;
+  bottom: 5px;
+  left: 5px;
+}

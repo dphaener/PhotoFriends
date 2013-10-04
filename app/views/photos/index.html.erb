@@ -1,35 +1,37 @@
 <div class="jumbotron">
     <h1>Edit Photo Collection</h1>
 
-    <div id="blueimp-gallery" class="blueimp-gallery blueimp-gallery-controls">
-      <div class="slides"></div>
-      <h3 class="title"></h3>
-      <a class="prev">‹</a>
-      <a class="next">›</a>
-      <a class="close">×</a>
-      <a class="play-pause"></a>
-      <ol class="indicator"></ol>
-    </div>
-    <div id="links">
+    <div id="thumbs">
         <% @photos.each do |photo| %>
-          <a href="<%= photo.image_url(:background) %>" title="<%= photo.caption %>">
-            <img src="<%= photo.image_url(:thumb) %>" alt="Banana">
-          </a>
+          <div id="<%= photo.id %>" class="photo-thumb" onclick="show_photo('<%= photo.id %>', '<%= photo.image %>', ' <%= photo.caption %>');">
+            <img src="<%= photo.image_url(:thumb) %>">
+          </div>
         <% end %>
      </div>
 </div>
-
+<div id='photo-dialog' data-photoid=''>
+  <img id='dialog-photo' src=''>
+  <div id='header' class='dialog-header'>
+    <h4></h4>
+  </div>
+  <div id='exit-button' class='exit' data-toggle='tooltip' title='Close Window' onclick="$('#photo-dialog').dialog('close');">
+    <img src='/assets/Button-Close-icon.png'>
+  </div>
+  <div id='delete-button' class='delete' data-toggle='tooltip' title='Delete Photo' onclick="delete_photo('<%= @user.id %>', '<%= @group.id %>', '<%= @gallery.id %>');">
+    <img src='/assets/DeleteRed.png'>
+  </div>
+</div>
 <script>
     $(document).ready(function(){
         setbackground("<%= get_background(@group.id) %>");
-        document.getElementById('links').onclick = function (event) {
-            event = event || window.event;
-            var target = event.target || event.srcElement,
-                    link = target.src ? target.parentNode : target,
-                    options = {index: link, event: event},
-                    links = this.getElementsByTagName('a');
-            blueimp.Gallery(links, options);
-        };
+        $('#photo-dialog').dialog({
+            autoOpen: false,
+            height: 'auto',
+            width: 'auto',
+            modal: true
+        }).dialog("widget").find(".ui-dialog-title").hide();
+        $('#exit-button').tooltip({ trigger: "hover", container: 'body' });
+        $('#delete-button').tooltip({ trigger: "hover", container: 'body' });
     });
 </script>
 
