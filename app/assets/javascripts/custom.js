@@ -6,27 +6,23 @@
  * To change this template use File | Settings | File Templates.
  */
 
-show_comment=function () {
-    $("#new-comment").css("visibility", "visible");
-    $("#no-comm").css("visibility","hidden");
-    $("#show_new_comment").css("visibility", "hidden");
-}
-
-init_gallery=function() {
-    blueimp.Gallery(
-        document.getElementById('links').getElementsByTagName('a'),
-        {
-            container: '#blueimp-gallery-carousel',
-            carousel: true
-        })
-}
-
-set_comment_back=function(comment_id) {
-    var back_colors = ['darkseagreen', 'burlywood', 'cadetblue', 'coral', 'cornflowerblue', 'darksalmon', 'darkseagreen', 'darkslategray', 'firebrick', 'forestgreen', 'indigo', 'lightcoral', 'lightseagreen', 'lightslategrey', 'limegreen', 'maroon', 'mediumaquamarine', 'mediumorchid', 'olive', 'olivedrab', 'palevioletred', 'peru', 'purple', 'rosybrown', 'royalblue', 'saddlebrown', 'teal', 'tomato', 'yellowgreen'];
-    var random_color = back_colors[Math.floor(Math.random() * back_colors.length)];
-    $('#'+comment_id).css("background-color", random_color);
-}
-
 setbackground=function(filepath) {
     $(document.body).css("background-image", 'url('+filepath+')');
+}
+
+show_photo = function(photo_id, photo_url, photo_caption) {
+    $('#dialog-photo').attr('src', photo_url);
+    $('#dialog-photo').attr('data-photoid', photo_id)
+    $('#photo-dialog').dialog('option', 'title', photo_caption);
+    $('#header h4').text(photo_caption);
+    $('#photo-dialog').dialog('open');
+};
+
+delete_photo = function(user_id, group_id, gallery_id) {
+    var photo_id = $('#dialog-photo').attr('data-photoid');
+    $.post(
+        ('/users/'+user_id+'/groups/'+group_id+'/galleries/'+gallery_id+'/photos/'+photo_id),
+        {'_method':'delete'},
+        function() { location.reload(); }
+    );
 }
