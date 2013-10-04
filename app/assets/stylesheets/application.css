@@ -16,6 +16,7 @@
  *= require blueimp/blueimp-gallery.min
  *= require bootstrap-tipover/popover-custom
  *= require bootstrap-tipover/popover
+ *= require jquery.ui.all
  *= require_tree .
  */
 
