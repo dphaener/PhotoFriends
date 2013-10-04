@@ -59,8 +59,6 @@ class PhotosController < ApplicationController
     redirect_to user_group_gallery_photos_path(@user.id, @group.id, @gallery.id)
   end
 
-  # TODO: Don't allow, or add the handling of special characters in comments
-
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_photo

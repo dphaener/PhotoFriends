@@ -3,7 +3,7 @@
 
     <div id="thumbs">
         <% @photos.each do |photo| %>
-          <div id="<%= photo.id %>" class="photo-thumb" onclick="show_photo('<%= photo.id %>', '<%= photo.image %>', ' <%= photo.caption %>');">
+          <div id="<%= photo.id %>" class="photo-thumb" onclick="show_photo('<%= photo.id %>', '<%= photo.image_url(:preview) %>', ' <%= photo.caption %>');">
             <img src="<%= photo.image_url(:thumb) %>">
           </div>
         <% end %>
