@@ -79,3 +79,4 @@ gem 'capistrano'
 
 gem 'capistrano-ext'
 
+gem "fog", "~> 1.3.1"
