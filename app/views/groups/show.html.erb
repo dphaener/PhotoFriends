@@ -32,7 +32,7 @@
           </div>
         <% end %>
     </div>
-    <div class="container visible-sm visible-xs">
+    <div class="container visible-sm">
         <% @gallery.each_slice(2) do |slice| %>
           <div class="row">
               <% slice.each do |g| %>
@@ -49,6 +49,30 @@
                         <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-gall-edit col-sm-3", title: "Edit gallery", id: "edit-gal-", 'data-toggle' => "tooltip"} %>
                         <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), { class: "btn btn-default btn-lg btn-gall-show col-sm-6", title: "View gallery", id: "show-gal-", 'data-toggle' => "tooltip" } %>
                         <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-photo-add col-sm-3", title: "Add new photo", id: "add-pic-", 'data-toggle' => "tooltip" } %>
+                    </div>
+                  </div>
+                </div>
+              <% end %>
+          </div>
+        <% end %>
+    </div>
+    <div class="container visible-xs">
+        <% @gallery.each_slice(1) do |slice| %>
+          <div class="row">
+              <% slice.each do |g| %>
+                <div class="col-xs-12 gallery-cont">
+                 <div class="gallery">
+                    <div class="gallery-header">
+                        <span id="span-<%= g.id %>" class="gallery-title"><%= g.name %></span>
+                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script>
+                    </div>
+                    <% randomphoto = Photo.where(gallery_id: g.id).take %>
+                    <% randomphoto = Photo.new if randomphoto.blank? %>
+                    <%= image_tag(randomphoto.image_url(:preview)) %>
+                    <div class="btn-group gallery-btns">
+                        <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-gall-edit col-xs-3", title: "Edit gallery", id: "edit-gal-", 'data-toggle' => "tooltip"} %>
+                        <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), { class: "btn btn-default btn-lg btn-gall-show col-xs-6", title: "View gallery", id: "show-gal-", 'data-toggle' => "tooltip" } %>
+                        <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-photo-add col-xs-3", title: "Add new photo", id: "add-pic-", 'data-toggle' => "tooltip" } %>
                     </div>
                   </div>
                 </div>
@@ -75,5 +99,6 @@
             'trigger': 'hover',
             'animation': 'true'
         }));
+        $("[id^=span-]").bigText();
     });
 </script>

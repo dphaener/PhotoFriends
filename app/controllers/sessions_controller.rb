@@ -37,14 +37,16 @@ class SessionsController < ApplicationController
   # TODO: Possibly refactor to handle all this mess with a single query......
   def set_last_group
     if session[:user_id]
-      usergroups = GroupsAndUsers.where(user_id: session[:user_id]).to_a
-      groups = []
-      if !usergroups.empty?
-        usergroups.each do |group|
-          groups << Group.find_by(id: group.group_id)
-        end
-        sorted = groups.sort {|g,h| h[:updated_at] <=> g[:updated_at]}
-        @group = Group.find_by(id: sorted[0].id)
+      user = User.find(session[:user_id])
+      @group = user.groups.order(:updated_at).first
+      # usergroups = GroupsAndUsers.where(user_id: session[:user_id]).to_a
+      # groups = []
+      # if !usergroups.empty?
+      #   usergroups.each do |group|
+      #     groups << Group.find_by(id: group.group_id)
+      #   end
+      #   sorted = groups.sort {|g,h| h[:updated_at] <=> g[:updated_at]}
+      #   @group = Group.find_by(id: sorted[0].id)
       else
         nil
       end

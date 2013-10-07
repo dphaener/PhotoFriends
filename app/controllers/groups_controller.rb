@@ -56,10 +56,10 @@ class GroupsController < ApplicationController
   # DELETE /groups/1
   # DELETE /groups/1.json
   def destroy
-    GroupsAndUsers.where(group_id: @group.id).destroy_all
+    GroupsAndUsers.destroy_all(group_id: @group.id)
     @group.destroy
     set_last_group
-    redirect_to user_group_path(@user.id, @group.id)
+    redirect_to user_group_path(@user, @group)
   end
   
   private
@@ -79,14 +79,16 @@ class GroupsController < ApplicationController
 
     def set_last_group
       if session[:user_id]
-        usergroups = GroupsAndUsers.where(user_id: session[:user_id]).to_a
-        groups = []
-        if !usergroups.empty?
-          usergroups.each do |group|
-            groups << Group.find_by(id: group.group_id)
-          end
-          sorted = groups.sort {|g,h| h[:updated_at] <=> g[:updated_at]}
-          @group = Group.find_by(id: sorted[0].id)
+        user = User.find(session[:user_id])
+        @group = user.groups.order(:updated_at).first
+        # usergroups = GroupsAndUsers.where(user_id: session[:user_id]).to_a
+        # groups = []
+        # if !usergroups.empty?
+        #   usergroups.each do |group|
+        #     groups << Group.find_by(id: group.group_id)
+        #   end
+        #   sorted = groups.sort {|g,h| h[:updated_at] <=> g[:updated_at]}
+        #   @group = Group.find_by(id: sorted[0].id)
         else
           nil
         end

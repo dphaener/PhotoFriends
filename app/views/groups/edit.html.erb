@@ -1,7 +1,7 @@
 <div class="jumbotron">
   <h1>Edit group details</h1>
 
-  <%= form_for(@group, url: user_groups_path(current_user.id, @group)) do |f| %>
+  <%= form_for(@group, url: user_groups_path(current_user, @group)) do |f| %>
       <% if @group.errors.any? %>
           <div id="error_explanation">
             <h2><%= pluralize(@group.errors.count, "error") %> prohibited this group from being saved:</h2>

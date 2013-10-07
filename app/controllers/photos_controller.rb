@@ -5,7 +5,7 @@ class PhotosController < ApplicationController
   # GET /photos
   # GET /photos.json
   def index
-    @photos = Photo.where(gallery_id: @gallery.id).to_a
+    @photos = @gallery.photos
   end
 
   # GET /photos/1
