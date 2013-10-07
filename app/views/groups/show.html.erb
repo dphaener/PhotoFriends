@@ -46,9 +46,9 @@
                     <% randomphoto = Photo.new if randomphoto.blank? %>
                     <%= image_tag(randomphoto.image_url(:preview)) %>
                     <div class="btn-group gallery-btns">
-                        <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-gall-edit col-md-3", title: "Edit gallery", id: "edit-gal-", 'data-toggle' => "tooltip"} %>
-                        <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), { class: "btn btn-default btn-lg btn-gall-show col-md-6", title: "View gallery", id: "show-gal-", 'data-toggle' => "tooltip" } %>
-                        <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-photo-add col-md-3", title: "Add new photo", id: "add-pic-", 'data-toggle' => "tooltip" } %>
+                        <%= link_to "<i class='glyphicon glyphicon-edit'></i>".html_safe, edit_user_group_gallery_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-gall-edit col-sm-3", title: "Edit gallery", id: "edit-gal-", 'data-toggle' => "tooltip"} %>
+                        <%= link_to "<i class='glyphicon glyphicon-th'></i>".html_safe, user_group_gallery_path(@user, @group, g.id), { class: "btn btn-default btn-lg btn-gall-show col-sm-6", title: "View gallery", id: "show-gal-", 'data-toggle' => "tooltip" } %>
+                        <%= link_to "<i class='glyphicon glyphicon-picture'></i>".html_safe, new_user_group_gallery_photo_path(@user.id, @group.id, g.id), { class: "btn btn-default btn-lg btn-photo-add col-sm-3", title: "Add new photo", id: "add-pic-", 'data-toggle' => "tooltip" } %>
                     </div>
                   </div>
                 </div>
