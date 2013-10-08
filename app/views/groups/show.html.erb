@@ -14,9 +14,9 @@
               <% slice.each do |g| %>
                 <div class="col-md-4 gallery-cont">
                  <div class="gallery">
-                    <div class="gallery-header">
+                    <div class="gallery-header" id="bigtext">
                         <span id="span-<%= g.id %>" class="gallery-title"><%= g.name %></span>
-                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script>
+                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script> 
                     </div>
                     <% randomphoto = Photo.where(gallery_id: g.id).take %>
                     <% randomphoto = Photo.new if randomphoto.blank? %>
@@ -38,9 +38,9 @@
               <% slice.each do |g| %>
                 <div class="col-sm-6 gallery-cont">
                  <div class="gallery">
-                    <div class="gallery-header">
+                    <div class="gallery-header" id="bigtext">
                         <span id="span-<%= g.id %>" class="gallery-title"><%= g.name %></span>
-                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script>
+                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script> 
                     </div>
                     <% randomphoto = Photo.where(gallery_id: g.id).take %>
                     <% randomphoto = Photo.new if randomphoto.blank? %>
@@ -62,9 +62,9 @@
               <% slice.each do |g| %>
                 <div class="col-xs-12 gallery-cont">
                  <div class="gallery">
-                    <div class="gallery-header">
+                    <div class="gallery-header" id="bigtext">
                         <span id="span-<%= g.id %>" class="gallery-title"><%= g.name %></span>
-                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script>
+                        <script>$("#span-<%= g.id %>").bigText({ fontSizeFactor:.7 });</script> 
                     </div>
                     <% randomphoto = Photo.where(gallery_id: g.id).take %>
                     <% randomphoto = Photo.new if randomphoto.blank? %>
@@ -99,6 +99,6 @@
             'trigger': 'hover',
             'animation': 'true'
         }));
-        $("[id^=span-]").bigText();
+        $('[id^=span-]').bigText();
     });
 </script>
