@@ -36,8 +36,6 @@ GEM
     arel (4.0.0)
     atomic (1.1.14)
     bcrypt-ruby (3.1.2)
-    bigtextjs_rails (0.1.4)
-      railties (>= 3.1)
     blueimp-gallery-rails (2.7.0)
       railties (>= 3.0, < 5.0)
     builder (3.1.4)
@@ -186,7 +184,6 @@ PLATFORMS
 
 DEPENDENCIES
   bcrypt-ruby
-  bigtextjs_rails (~> 0.1.4)
   blueimp-gallery-rails (~> 2.7.0)
   bootstrap-sass!
   capybara
